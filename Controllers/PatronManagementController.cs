@@ -16,7 +16,7 @@ namespace Library_web.Controllers
         }
 
         [HttpPost]
-        public static void AddPatron(string nam, string emailAderss)
+        public  void AddPatron(string nam, string emailAderss)
         {
             PatronManagement patronManagement = new PatronManagement
             {
@@ -27,7 +27,7 @@ namespace Library_web.Controllers
             _context.SaveChanges();
         }
         [HttpDelete]
-        public static void Remove(int ID)
+        public void Remove(int ID)
         {
             PatronManagement patrnmanagement = _context.patronManagements.SingleOrDefault(x => x.Pat_ID == ID);
 
@@ -44,7 +44,7 @@ namespace Library_web.Controllers
             }
         }
         [HttpPut]
-        public static void UpdateBook(int ID, string Name, string EmailAdress)
+        public void UpdateBook(int ID, string Name, string EmailAdress)
         {
             PatronManagement patrnmanagement = _context.patronManagements.SingleOrDefault(x => x.Pat_ID == ID);
 
@@ -64,13 +64,13 @@ namespace Library_web.Controllers
         }
 
         [HttpGet]
-        public static PatronManagement GetPatronByName(string Name)
+        public   PatronManagement GetPatronByName(string Name)
         {
             PatronManagement patrnmanagement = _context.patronManagements.SingleOrDefault(x => x.Name == Name);
             return patrnmanagement;
         }
         [HttpGet("GetEmployeeByEmail")]
-        public static PatronManagement GetPatronByEmail(string EmailAdress)
+        public PatronManagement GetPatronByEmail(string EmailAdress)
         {
             PatronManagement patrnmanagement = _context.patronManagements.SingleOrDefault(x => x.EmailAddress == EmailAdress);
             return patrnmanagement;
