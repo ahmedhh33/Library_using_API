@@ -85,3 +85,4 @@ C:\Users\TRA\Desktop\TRA-Code\Library_web\obj\Debug\net6.0\refint\Library_web.dl
 C:\Users\TRA\Desktop\TRA-Code\Library_web\obj\Debug\net6.0\Library_web.pdb
 C:\Users\TRA\Desktop\TRA-Code\Library_web\obj\Debug\net6.0\Library_web.genruntimeconfig.cache
 C:\Users\TRA\Desktop\TRA-Code\Library_web\obj\Debug\net6.0\ref\Library_web.dll
+C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\System.Net.Http.Json.dll

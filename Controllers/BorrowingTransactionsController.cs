@@ -1,6 +1,8 @@
 ﻿using Library_web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Library_web.Controllers
 {
@@ -15,151 +17,275 @@ namespace Library_web.Controllers
             _context = DB;
         }
         [HttpPost]
-        public void CreateBorrowingTransaction(int patronId, int bookId)
+        public IActionResult CreateBorrowingTransaction(int patronId, int bookId)
         {
-            PatronManagement patron = _context.patronManagements.FirstOrDefault(p => p.Pat_ID == patronId);
-            BookManagement book = _context.bookManagements.FirstOrDefault(b => b.B_ID == bookId);
-
-            if (patron == null || book == null || !book.is_Available)
+            try
             {
-                Console.WriteLine("Patron or Book not found");
-                return;
+                PatronManagement patron = _context.patronManagements.FirstOrDefault(p => p.Pat_ID == patronId);
+                BookManagement book = _context.bookManagements.FirstOrDefault(b => b.B_ID == bookId);
+
+                if (patron == null || book == null || !book.is_Available)
+                {
+                    return BadRequest("Patron or Book not found or the book is not available");
+                }
+
+                BorrowingTransactions transaction = new BorrowingTransactions
+                {
+                    Pat_ID = patronId,
+                    B_ID = bookId,
+                    borrowing_date = DateTime.Now,
+                    return_date = null 
+                };
+
+                _context.BorrowingTransactions.Add(transaction);
+                book.is_Available = false; // Mark the book as unavailable.
+                _context.SaveChanges();
+
+                return Ok("Borrowing transaction created successfully");
             }
-
-            BorrowingTransactions transaction = new BorrowingTransactions
+            catch (Exception ex)
             {
-                Pat_ID = patronId,
-                B_ID = bookId,
-                borrowing_date = DateTime.Now,
-                return_date = null // after two weeks
-            };
-
-            _context.BorrowingTransactions.Add(transaction);
-            book.is_Available = false; // Mark the book as unavailable.
-            _context.SaveChanges();
+                
+                return BadRequest("Error creating borrowing transaction: " + ex.Message);
+            }
         }
+
         [HttpPut]
-        public void MarkBookAsReturned(int transactionId)
+        public IActionResult MarkBookAsReturned(int transactionId)
         {
             var transaction = _context.BorrowingTransactions.FirstOrDefault(t => t.TraID == transactionId);
-
-            if (transaction == null || transaction.return_date != null)
+            try
             {
-                Console.WriteLine(" transaction not found or book is already returned.");
-                return;
-            }
+                if (transaction == null || transaction.return_date !=null)
+                {
+                    return NotFound(" transaction not found or book is already returned.");
+                }
+                else
+                {
+                    transaction.return_date = DateTime.Now;
+                    var book = _context.bookManagements.FirstOrDefault(b => b.B_ID == transaction.B_ID);
 
-            transaction.return_date = DateTime.Now;
-            var book = _context.bookManagements.FirstOrDefault(b => b.B_ID == transaction.B_ID);
+                    if (book != null)
+                    {
+                        book.is_Available = true; // Mark the book as available.
+                    }
 
-            if (book != null)
+                    _context.SaveChanges();
+                    return Ok("Book returned succsessfully");
+                }
+            } catch (Exception ex)
             {
-                book.is_Available = true; // Mark the book as available.
+                return BadRequest(ex.Message);
             }
-
-            _context.SaveChanges();
         }
         [HttpDelete]
-        public void Remove(int transactionId)
+        public IActionResult Remove(int transactionId)
         {
-            BorrowingTransactions borrowingTransactions = _context.BorrowingTransactions.FirstOrDefault(x=>x.TraID== transactionId);
-            if (borrowingTransactions != null)
+            try
             {
-                _context.BorrowingTransactions.Remove(borrowingTransactions);
-                _context.SaveChanges();
-                Console.WriteLine("BoorrowingTra Removes SUccessfully");
+                BorrowingTransactions borrowingTransactions = _context.BorrowingTransactions.FirstOrDefault(x => x.TraID == transactionId);
+
+                if (borrowingTransactions != null)
+                {
+                    _context.BorrowingTransactions.Remove(borrowingTransactions);
+                    _context.SaveChanges();
+
+                    return Ok("Borrowing transaction removed successfully");
+                }
+                else
+                {
+                    return NotFound("Transaction not found");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                Console.WriteLine("Tra Not Found");
+                
+                return BadRequest("Error removing borrowing transaction: " + ex.Message);
             }
         }
+
 
         [HttpGet("GetTransactionHistoryForPatron")]
-        public void GetTransactionHistoryForPatron(int patronId)
+        public IActionResult GetTransactionHistoryForPatron(int patronId)
         {
-            var ph = _context.patronManagements.Include(x => x.borrowingTransactions)
-                .ThenInclude(x => x.BookManagement).FirstOrDefault(x=>x.Pat_ID==patronId);
-            if (ph != null)
+            try
             {
-                var BH = ph.borrowingTransactions.OrderByDescending(B=>B.borrowing_date).ToList();
-                foreach (var transaction in BH)
+                var options = new JsonSerializerOptions
                 {
-                    Console.WriteLine($"TraID: {transaction.TraID}\n BookID: {transaction.B_ID}\n BookTitle: {transaction.BookManagement.title}\n BorrowDate: {transaction.borrowing_date}\n Returndate: {transaction.return_date}\n -------------------");
+                    ReferenceHandler = ReferenceHandler.Preserve,
+                    WriteIndented = true,
+                };
+
+                var patron = _context.patronManagements
+                    .Include(x => x.borrowingTransactions)
+                    .ThenInclude(x => x.BookManagement)
+                    .FirstOrDefault(x => x.Pat_ID == patronId);
+
+                if (patron != null)
+                {
+                    var transactionHistory = patron.borrowingTransactions
+                    .OrderByDescending(transaction => transaction.borrowing_date)
+                    .Select(transaction => new
+                            {
+                             TransactionID = transaction.TraID,
+                             BookID = transaction.B_ID,
+                             BookTitle = transaction.BookManagement.title,
+                             BorrowDate = transaction.borrowing_date,
+                             ReturnDate = transaction.return_date
+                            })
+                    .ToList();
+
+                    return Ok(JsonSerializer.Serialize(transactionHistory, options));
                 }
-                //return _context.BorrowingTransactions
-                //    .Include(t => t.PatronManagement)// Include the book information.
-                //    .Include(x => x.BookManagement)
-                //    .FirstOrDefault(t => t.Pat_ID == patronId).ToList();
+                else
+                {
+                    return NotFound("Patron not found");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                Console.WriteLine("No Data");
+                return BadRequest("Error retrieving transaction history: " + ex.Message);
             }
         }
+
+        
         [HttpGet("GetTransactionHistoryForBook")]
-        public void GetTransactionHistoryForBook(int bookid)
+        public IActionResult GetTransactionHistoryForBook(int bookid)
         {
-            var Bh = _context.bookManagements.Include(x => x.borrowingTransactions)
-                .ThenInclude(x => x.PatronManagement).FirstOrDefault(x => x.B_ID == bookid);
-            if (Bh != null)
-            {
-                var BH = Bh.borrowingTransactions.OrderByDescending(B => B.borrowing_date).ToList();
-                foreach (var transaction in BH)
+            try 
+            { 
+                var options = new JsonSerializerOptions
                 {
-                    Console.WriteLine($"TraID: {transaction.TraID}\n PatronID: {transaction.Pat_ID}\n PatronName: {transaction.PatronManagement.Name}\n BorrowDate: {transaction.borrowing_date}\n Returndate: {transaction.return_date}\n -------------------");
-                }
+                ReferenceHandler = ReferenceHandler.Preserve,
+                WriteIndented = true,
+                };
+                var Bh = _context.bookManagements.Include(x => x.borrowingTransactions)
+                                             .ThenInclude(x => x.PatronManagement)
+                                             .FirstOrDefault(x => x.B_ID == bookid);
+                if (Bh != null)
+                {
+                   var BH = Bh.borrowingTransactions.OrderByDescending(B => B.borrowing_date)
+                                                 .Select(B => new
+                                                 {
+                                                     TransactionID = B.TraID,
+                                                     Booktitle = B.BookManagement.title,
+                                                     PatronId = B.Pat_ID,
+                                                     PatronName = B.PatronManagement.Name,
+                                                     BorrowDate = B.borrowing_date,
+                                                     returnDate = B.borrowing_date,
+                                                 })
+                                                .ToList();
                 
+                  return Ok(JsonSerializer.Serialize(BH,options));
+                }
+                else
+                {
+                   return NotFound("Book not found");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                Console.WriteLine("No Data");
+                return BadRequest("Error retrieving transaction history: " + ex.Message);
             }
 
-            //return _context.BorrowingTransactions
-            //    .Where(t => t.B_ID == bookid)
-            //    .Include(t => t.Pat_ID) // Include the related patron information.
-            //    .ToList();
         }
-        //[HttpGet("AllTransaction")]
+       
         [HttpGet("AllTransaction")]
         public IActionResult GetAllTransactionHistory()
         {
-            var transactions = _context.BorrowingTransactions
-                .Include(t => t.BookManagement)
-                .Include(t => t.PatronManagement)
-                .OrderByDescending(B => B.borrowing_date)
-                .ToList();
-
-            // Check if transactions were found
-            if (transactions == null || transactions.Count == 0)
+            try
             {
-                return NotFound(); 
-            }
+                var options = new JsonSerializerOptions
+                {
+                    ReferenceHandler = ReferenceHandler.Preserve,
+                    WriteIndented = true,
+                };
 
-            return Ok(transactions); 
+                var transactions = _context.BorrowingTransactions
+                    .Include(t => t.BookManagement)
+                    .Include(t => t.PatronManagement)
+                    .OrderByDescending(B => B.borrowing_date)
+                    .ToList();
+
+                // Check if transactions were found
+                if (transactions == null || transactions.Count == 0)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    var TH= Ok(transactions.Select(x => new
+                    {
+                        TransactionID = x.TraID,
+                        BookID = x.B_ID,
+                        Booktitle = x.BookManagement.title,
+                        PatronId = x.Pat_ID,
+                        PatronName = x.PatronManagement.Name,
+                        BorrowDate = x.borrowing_date,
+                        returnDate = x.borrowing_date,
+                    }));
+                    return Ok(JsonSerializer.Serialize(TH, options));
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Error retrieving transaction history: " + ex.Message);
+            }
+        }
+        [HttpGet("GetByBorrowDate")]
+        public IActionResult GetAllBorrowingsInDate(DateOnly date)
+        {
+            try
+            {
+                var transactions = _context.BorrowingTransactions
+                    .Include(t => t.BookManagement)
+                    .Include(t => t.PatronManagement)
+                    .Where(r => r.borrowing_date.Date == date)
+                    .ToList();
+
+                return Ok(transactions);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("An error occurred: " + ex.Message);
+            }
+        }
+        [HttpGet("GetByReturnDate")]
+        public IActionResult GetAllTransactionsByReturnDate(DateTime returnDate)
+        {
+            try
+            {
+                var transactions = _context.BorrowingTransactions
+                    .Include(t => t.BookManagement)
+                    .Include(t => t.PatronManagement)
+                    .Where(r => r.return_date.HasValue && r.return_date.Value.Date == returnDate.Date)
+                    .ToList();
+
+                return Ok(transactions);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("An error occurred: " + ex.Message);
+            }
+        }
+        [HttpGet("GetBorrowCount")]
+        public IActionResult GetBorrowCountForBook(int bookId)
+        {
+            try
+            {
+                var borrowCount = _context.BorrowingTransactions
+                    .Where(t => t.B_ID == bookId)
+                    .Count();
+
+                return Ok(borrowCount);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("An error occurred: " + ex.Message);
+            }
         }
 
-        //public List<BorrowingTransactions> GetAllTransactionHistory()
-        //{
-
-        //        var transactions = _context.BorrowingTransactions
-        //            .Include(t => t.BookManagement)
-        //            .Include(t => t.PatronManagement)
-        //            .OrderByDescending(B => B.borrowing_date).ToList();
-
-        //    return transactions;
-        //    //foreach (var transaction in BRH)
-        //    //{
-        //    //    Console.WriteLine($"TraID: {transaction.TraID}\n BookID: {transaction.B_ID}\n BookName: {transaction.BookManagement.title}\n PatronID: {transaction.Pat_ID}\n PatronName: {transaction.PatronManagement.Name}\n BorrowDate: {transaction.borrowing_date}\n Returndate: {transaction.return_date}\n -------------------");
-        //    //}
-        //}
-        //public List<BorrowingTransactions> GetAllBorrowingsInDate(DateOnly date)
-        //{
-        //    var transaction = _context.BorrowingTransactions.Include(t=>t.BookManagement)
-        //                                                    .Include(t=> t.PatronManagement)
-        //                                                    .Where(r=>r.borrowing_date == date).ToList();
-        //    return transaction;
-        //}
     }
 }
