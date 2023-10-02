@@ -14,67 +14,154 @@ namespace Library_web.Controllers
             _context = DB;
         }
         [HttpPost]
-        public  void AddBook(BookManagement Book)
+        public IActionResult AddBook(string title, string author, int publication_year)
         {
-            _context.bookManagements.Add(Book);
-            _context.SaveChanges();
+            try
+            {
+                BookManagement bookManagement = new BookManagement
+                {
+                    title = title,
+                    author = author,
+                    publication_year = publication_year,
+                    is_Available = true,
+                };
+
+                _context.bookManagements.Add(bookManagement);
+                _context.SaveChanges();
+
+                return Ok("Book added successfully");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Error adding book: " + ex.Message);
+            }
         }
+
         [HttpDelete]
-        public  void Remove(int ID)
+        public IActionResult Remove(int ID)
         {
-            BookManagement bookManagement = _context.bookManagements.SingleOrDefault(x => x.B_ID == ID);
-
-            if (bookManagement != null)
+            try
             {
-                _context.bookManagements.Remove(bookManagement);
-                _context.SaveChanges();
+                BookManagement bookManagement = _context.bookManagements.SingleOrDefault(x => x.B_ID == ID);
 
-                Console.WriteLine("Book Removes SUccessfully");
+                if (bookManagement != null)
+                {
+                    _context.bookManagements.Remove(bookManagement);
+                    _context.SaveChanges();
+
+                    return Ok("Book removed successfully");
+                }
+                else
+                {
+                    return NotFound("Book not found");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                Console.WriteLine("Book Not Found");
+                
+                return BadRequest("Error removing book: " + ex.Message);
             }
         }
+
         [HttpPut]
-        public  void UpdateBook(int ID, string title, string author, int publication_year)
+        public IActionResult UpdateBook(int ID, string title, string author, int publication_year)
         {
-            BookManagement bookManagement = _context.bookManagements.SingleOrDefault(x => x.B_ID == ID);
-
-            if (bookManagement != null)
+            try
             {
-                bookManagement.title = title;
-                bookManagement.author = author;
-                bookManagement.publication_year = publication_year;
-                _context.Update(bookManagement);
-                _context.SaveChanges();
+                BookManagement bookManagement = _context.bookManagements.SingleOrDefault(x => x.B_ID == ID);
 
-                Console.WriteLine("Book updated SUccessfully");
+                if (bookManagement != null)
+                {
+                    bookManagement.title = title;
+                    bookManagement.author = author;
+                    bookManagement.publication_year = publication_year;
+
+                    _context.Update(bookManagement);
+                    _context.SaveChanges();
+
+                    return Ok("Book updated successfully");
+                }
+                else
+                {
+                    return NotFound("Book not found");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                Console.WriteLine("Book Not Found");
+                
+                return BadRequest("Error updating book: " + ex.Message);
             }
         }
 
-        [HttpGet]
-        public  BookManagement GetBookByTitle(string title)
+
+        [HttpGet("GetBookByTitle")]
+        public  IActionResult GetBookByTitle(string title)
         {
             BookManagement bookManagement = _context.bookManagements.SingleOrDefault(b => b.title == title);
-            return bookManagement;
+            if (bookManagement != null)
+            {
+                return Ok(bookManagement);
+            }
+            else
+            {
+                return NotFound("No book founs");
+            }
+            
         }
         [HttpGet("GetBookByAuthor")]
-        public  List<BookManagement> GetBookByAuthor(string Author)
+        public  IActionResult GetBookByAuthor(string Author)
         {
             List<BookManagement> bookManagement = _context.bookManagements.Where(b => b.author == Author).ToList();
-            return bookManagement;
+            if (bookManagement != null)
+            {
+                return Ok(bookManagement);
+            }
+            else
+            {
+                return NotFound("No book founs");
+            }
 
         }
         [HttpGet("GetBookByPublesheryear")]
-        public  List<BookManagement> GetBookByPublisherDate(int Date)
+        public  IActionResult GetBookByPublisherDate(int Date)
         {
             List<BookManagement> bookManagement = _context.bookManagements.Where(b => b.publication_year == Date).ToList();
-            return bookManagement;
+            if (bookManagement != null)
+            {
+                return Ok(bookManagement);
+            }
+            else 
+            { 
+                return NotFound("No book found");
+            }
+
+        }
+
+        [HttpGet("GetBookCountByear")]
+        public IActionResult GetBookCount(int PY)
+        {
+            var bookManagement = _context.bookManagements.Where(b => b.publication_year == PY).Count();
+            if (bookManagement>0)
+            {
+                return Ok(bookManagement);
+            }
+            else
+            {
+                return BadRequest("No book published in this year");
+            }
+        }
+        [HttpGet("GetAllBook")]
+        public IActionResult GetAllBooks()
+        {
+            var bookManagements = _context.bookManagements.ToList();
+            if(bookManagements!=null) { return Ok(bookManagements); } else { return NotFound("There is no book"); }
+        }
+
+        [HttpGet("GetAvailableBook")]
+        public IActionResult GetAvailableBooks()
+        {
+            var bookManagements = _context.bookManagements.Where(x=>x.is_Available==true).ToList();
+            if (bookManagements != null) { return Ok(bookManagements); } else { return NotFound("There is no book Available"); }
 
         }
     }

@@ -10,6 +10,8 @@ namespace Library_web.Models
         public string Name { get; set; }
         [EmailAddress]
         public string EmailAddress { get; set; }
+        [Required]
+        public int Age { get; set; }
 
         public List<BorrowingTransactions> borrowingTransactions { get; set; }
     }

@@ -13,8 +13,8 @@ namespace Library_web.Models
         public string author { get; set; }
         [Required]
         public int publication_year { get; set; }
-
-        public bool is_Available = true;
+        [Required]
+        public bool is_Available { get; set; }
 
         public List<BorrowingTransactions> borrowingTransactions { get; set; }
     }
