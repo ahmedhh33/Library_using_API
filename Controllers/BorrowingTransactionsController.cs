@@ -235,17 +235,41 @@ namespace Library_web.Controllers
             }
         }
         [HttpGet("GetByBorrowDate")]
-        public IActionResult GetAllBorrowingsInDate(DateOnly date)
+        public IActionResult GetAllBorrowingsInDate(DateTime Borrowdate)
         {
+            var options = new JsonSerializerOptions
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                WriteIndented = true,
+            };
+
             try
             {
                 var transactions = _context.BorrowingTransactions
                     .Include(t => t.BookManagement)
                     .Include(t => t.PatronManagement)
-                    .Where(r => r.borrowing_date.Date == date)
+                    .Where(r => r.borrowing_date == Borrowdate.Date)
                     .ToList();
 
-                return Ok(transactions);
+                if (transactions == null || transactions.Count == 0)
+                {
+                    return NotFound("No books borrowed this day ");
+                }
+                else
+                {
+                    var TH = Ok(transactions.Select(x => new
+                    {
+                        TransactionID = x.TraID,
+                        BookID = x.B_ID,
+                        Booktitle = x.BookManagement.title,
+                        PatronId = x.Pat_ID,
+                        PatronName = x.PatronManagement.Name,
+                        BorrowDate = x.borrowing_date,
+                        returnDate = x.borrowing_date,
+                    }));
+                    return Ok(JsonSerializer.Serialize(TH, options));
+
+                }
             }
             catch (Exception ex)
             {
@@ -255,6 +279,12 @@ namespace Library_web.Controllers
         [HttpGet("GetByReturnDate")]
         public IActionResult GetAllTransactionsByReturnDate(DateTime returnDate)
         {
+            var options = new JsonSerializerOptions
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                WriteIndented = true,
+            };
+
             try
             {
                 var transactions = _context.BorrowingTransactions
@@ -263,7 +293,25 @@ namespace Library_web.Controllers
                     .Where(r => r.return_date.HasValue && r.return_date.Value.Date == returnDate.Date)
                     .ToList();
 
-                return Ok(transactions);
+                if (transactions == null || transactions.Count == 0)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    var TH = Ok(transactions.Select(x => new
+                    {
+                        TransactionID = x.TraID,
+                        BookID = x.B_ID,
+                        Booktitle = x.BookManagement.title,
+                        PatronId = x.Pat_ID,
+                        PatronName = x.PatronManagement.Name,
+                        BorrowDate = x.borrowing_date,
+                        returnDate = x.borrowing_date,
+                    }));
+                    return Ok(JsonSerializer.Serialize(TH, options));
+
+                }
             }
             catch (Exception ex)
             {
