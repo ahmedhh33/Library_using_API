@@ -1,4 +1,5 @@
 ﻿using Library_web.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,7 +15,7 @@ namespace Library_web.Controllers
         {
             _context = DB;
         }
-
+        [Authorize]
         [HttpPost]
         public IActionResult AddPatron(string name, string emailAddress, int age)
         {
@@ -38,7 +39,7 @@ namespace Library_web.Controllers
                 return BadRequest("Error adding patron: " + ex.Message);
             }
         }
-
+        [Authorize]
         [HttpDelete]
         public ActionResult Remove(int ID)
         {
@@ -64,7 +65,7 @@ namespace Library_web.Controllers
                 return BadRequest("Error removing patron: " + ex.Message);
             }
         }
-
+        [Authorize]
         [HttpPut]
         public IActionResult UpdatePatron(int ID, string Name, string EmailAddress, int Age)
         {

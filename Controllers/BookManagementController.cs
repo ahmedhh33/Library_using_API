@@ -1,6 +1,7 @@
 ﻿using Library_web.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
+using Serilog;
 namespace Library_web.Controllers
 {
     [Route("Book/BookManagement")]
@@ -13,9 +14,11 @@ namespace Library_web.Controllers
         {
             _context = DB;
         }
+        [Authorize]
         [HttpPost]
         public IActionResult AddBook(string title, string author, int publication_year)
         {
+            Log.Information($"new request to add book : {title} {author} {publication_year}");
             try
             {
                 BookManagement bookManagement = new BookManagement
@@ -28,7 +31,7 @@ namespace Library_web.Controllers
 
                 _context.bookManagements.Add(bookManagement);
                 _context.SaveChanges();
-
+                Log.Information($"Book : {title} added successfuly");
                 return Ok("Book added successfully");
             }
             catch (Exception ex)
@@ -36,7 +39,7 @@ namespace Library_web.Controllers
                 return BadRequest("Error adding book: " + ex.Message);
             }
         }
-
+        [Authorize]
         [HttpDelete]
         public IActionResult Remove(int ID)
         {
@@ -62,7 +65,7 @@ namespace Library_web.Controllers
                 return BadRequest("Error removing book: " + ex.Message);
             }
         }
-
+        [Authorize]
         [HttpPut]
         public IActionResult UpdateBook(int ID, string title, string author, int publication_year)
         {

@@ -86,3 +86,16 @@ C:\Users\TRA\Desktop\TRA-Code\Library_web\obj\Debug\net6.0\Library_web.pdb
 C:\Users\TRA\Desktop\TRA-Code\Library_web\obj\Debug\net6.0\Library_web.genruntimeconfig.cache
 C:\Users\TRA\Desktop\TRA-Code\Library_web\obj\Debug\net6.0\ref\Library_web.dll
 C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\System.Net.Http.Json.dll
+C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\Serilog.dll
+C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\Serilog.AspNetCore.dll
+C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\Serilog.Sinks.File.dll

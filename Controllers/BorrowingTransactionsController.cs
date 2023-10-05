@@ -1,4 +1,5 @@
 ﻿using Library_web.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
@@ -16,6 +17,7 @@ namespace Library_web.Controllers
         {
             _context = DB;
         }
+        [Authorize]
         [HttpPost]
         public IActionResult CreateBorrowingTransaction(int patronId, int bookId)
         {
@@ -49,7 +51,7 @@ namespace Library_web.Controllers
                 return BadRequest("Error creating borrowing transaction: " + ex.Message);
             }
         }
-
+        [Authorize]
         [HttpPut]
         public IActionResult MarkBookAsReturned(int transactionId)
         {
@@ -78,6 +80,7 @@ namespace Library_web.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [Authorize]
         [HttpDelete]
         public IActionResult Remove(int transactionId)
         {
@@ -295,7 +298,7 @@ namespace Library_web.Controllers
 
                 if (transactions == null || transactions.Count == 0)
                 {
-                    return NotFound();
+                    return NotFound("No books returned this day ");
                 }
                 else
                 {
