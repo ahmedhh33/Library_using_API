@@ -2,6 +2,10 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+//using Newtonsoft.Json;
+using System.Net.Http.Json;
+using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -11,15 +15,19 @@ namespace Library_web.Controllers
     [ApiController]
     public class BorrowingTransactionsController : ControllerBase
     {
+        HttpClient client;
         public static ApplicationDbContext _context;
 
         public BorrowingTransactionsController(ApplicationDbContext DB)
         {
+            client = new HttpClient();
+
+            client.BaseAddress = new Uri("https://localhost:7088/");
             _context = DB;
         }
         [Authorize]
         [HttpPost]
-        public IActionResult CreateBorrowingTransaction(int patronId, int bookId)
+        public async Task<IActionResult> CreateBorrowingTransaction(int patronId, int bookId)
         {
             try
             {
@@ -36,8 +44,23 @@ namespace Library_web.Controllers
                     Pat_ID = patronId,
                     B_ID = bookId,
                     borrowing_date = DateTime.Now,
-                    return_date = null 
+                    return_date = null
                 };
+                HttpResponseMessage res = client.PostAsync("api/Transaction/Withdraw", new StringContent(JsonConvert.SerializeObject(new { accountNumber = 10460, amount = 33, accountHolderID = 3 }), Encoding.UTF8, "application/json")).Result;
+
+               // HttpResponseMessage res = client.GetAsync($"api/Transaction/Withdraw?accountNumber=10460&amount=33&accountHolderID=3").Result;
+
+                if (res.IsSuccessStatusCode)
+                {
+                    return Ok("Sucssed");
+                }
+                else
+                {
+                    return BadRequest("No responce found");
+                }
+
+
+
 
                 _context.BorrowingTransactions.Add(transaction);
                 book.is_Available = false; // Mark the book as unavailable.
@@ -47,10 +70,76 @@ namespace Library_web.Controllers
             }
             catch (Exception ex)
             {
-                
+
                 return BadRequest("Error creating borrowing transaction: " + ex.Message);
             }
         }
+
+        //[HttpPost]
+        //public IActionResult CreateBorrowingTransaction(int patronId, int bookId)
+        //{
+        //    try
+        //    {
+        //        PatronManagement patron = _context.patronManagements.FirstOrDefault(p => p.Pat_ID == patronId);
+        //        BookManagement book = _context.bookManagements.FirstOrDefault(b => b.B_ID == bookId);
+
+        //        if (patron == null || book == null || !book.is_Available)
+        //        {
+        //            return BadRequest("Patron or Book not found or the book is not available");
+        //        }
+
+        //        // Make a POST request to the Withdraw API
+        //        var withdrawRequest = new WithdrawRequest
+        //        {
+        //            AccountNumber = 10460,
+        //            Amount = 33,
+        //            AccountHolderID = 3
+        //        };
+
+        //        // Make the POST request to the Withdraw API
+        //        var withdrawResponse = MakeWithdrawal(withdrawRequest);
+
+        //        if (withdrawResponse.IsSuccessStatusCode)
+        //        {
+        //            BorrowingTransactions transaction = new BorrowingTransactions
+        //            {
+        //                Pat_ID = patronId,
+        //                B_ID = bookId,
+        //                borrowing_date = DateTime.Now,
+        //                return_date = null
+        //            };
+
+        //            _context.BorrowingTransactions.Add(transaction);
+        //            book.is_Available = false; // Mark the book as unavailable.
+        //            _context.SaveChanges();
+
+        //            return Ok("Borrowing transaction created successfully");
+        //        }
+        //        else
+        //        {
+        //            return BadRequest("Error creating borrowing transaction.");
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, "An error occurred: " + ex.Message);
+        //    }
+        //}
+
+        //private HttpResponseMessage MakeWithdrawal(WithdrawRequest request)
+        //{
+        //    using (var client = new HttpClient())
+        //    {
+        //        var apiUrl = "https://localhost:7088/api/Transaction/Withdraw";
+        //        var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
+
+        //        return client.PostAsync(apiUrl, content).Result;
+        //    }
+        //}
+
+
+
+
         [Authorize]
         [HttpPut]
         public IActionResult MarkBookAsReturned(int transactionId)
@@ -113,11 +202,11 @@ namespace Library_web.Controllers
         {
             try
             {
-                var options = new JsonSerializerOptions
-                {
-                    ReferenceHandler = ReferenceHandler.Preserve,
-                    WriteIndented = true,
-                };
+            //    var options = new JsonSerializerOptions
+            //    {
+            //        ReferenceHandler = ReferenceHandler.Preserve,
+            //        WriteIndented = true,
+            //    };
 
                 var patron = _context.patronManagements
                     .Include(x => x.borrowingTransactions)
@@ -138,7 +227,8 @@ namespace Library_web.Controllers
                             })
                     .ToList();
 
-                    return Ok(JsonSerializer.Serialize(transactionHistory, options));
+                    //return Ok(JsonSerializer.Serialize(transactionHistory, options));
+                    return Ok(transactionHistory);
                 }
                 else
                 {
@@ -157,11 +247,11 @@ namespace Library_web.Controllers
         {
             try 
             { 
-                var options = new JsonSerializerOptions
-                {
-                ReferenceHandler = ReferenceHandler.Preserve,
-                WriteIndented = true,
-                };
+                //var options = new JsonSerializerOptions
+                //{
+                //ReferenceHandler = ReferenceHandler.Preserve,
+                //WriteIndented = true,
+                //};
                 var Bh = _context.bookManagements.Include(x => x.borrowingTransactions)
                                              .ThenInclude(x => x.PatronManagement)
                                              .FirstOrDefault(x => x.B_ID == bookid);
@@ -179,7 +269,8 @@ namespace Library_web.Controllers
                                                  })
                                                 .ToList();
                 
-                  return Ok(JsonSerializer.Serialize(BH,options));
+                  //return Ok(JsonSerializer.Serialize(BH,options));
+                  return Ok(BH);
                 }
                 else
                 {
@@ -198,11 +289,11 @@ namespace Library_web.Controllers
         {
             try
             {
-                var options = new JsonSerializerOptions
-                {
-                    ReferenceHandler = ReferenceHandler.Preserve,
-                    WriteIndented = true,
-                };
+                //var options = new JsonSerializerOptions
+                //{
+                //    ReferenceHandler = ReferenceHandler.Preserve,
+                //    WriteIndented = true,
+                //};
 
                 var transactions = _context.BorrowingTransactions
                     .Include(t => t.BookManagement)
@@ -227,8 +318,8 @@ namespace Library_web.Controllers
                         BorrowDate = x.borrowing_date,
                         returnDate = x.borrowing_date,
                     }));
-                    return Ok(JsonSerializer.Serialize(TH, options));
-
+                   // return Ok(JsonSerializer.Serialize(TH, options));
+                   return Ok(TH);
                 }
 
             }
@@ -240,11 +331,11 @@ namespace Library_web.Controllers
         [HttpGet("GetByBorrowDate")]
         public IActionResult GetAllBorrowingsInDate(DateTime Borrowdate)
         {
-            var options = new JsonSerializerOptions
-            {
-                ReferenceHandler = ReferenceHandler.Preserve,
-                WriteIndented = true,
-            };
+            //var options = new JsonSerializerOptions
+            //{
+            //    ReferenceHandler = ReferenceHandler.Preserve,
+            //    WriteIndented = true,
+            //};
 
             try
             {
@@ -270,8 +361,8 @@ namespace Library_web.Controllers
                         BorrowDate = x.borrowing_date,
                         returnDate = x.borrowing_date,
                     }));
-                    return Ok(JsonSerializer.Serialize(TH, options));
-
+                   // return Ok(JsonSerializer.Serialize(TH, options));
+                   return BadRequest(TH);
                 }
             }
             catch (Exception ex)
@@ -282,11 +373,11 @@ namespace Library_web.Controllers
         [HttpGet("GetByReturnDate")]
         public IActionResult GetAllTransactionsByReturnDate(DateTime returnDate)
         {
-            var options = new JsonSerializerOptions
-            {
-                ReferenceHandler = ReferenceHandler.Preserve,
-                WriteIndented = true,
-            };
+            //var options = new JsonSerializerOptions
+            //{
+            //    ReferenceHandler = ReferenceHandler.Preserve,
+            //    WriteIndented = true,
+            //};
 
             try
             {
@@ -312,8 +403,8 @@ namespace Library_web.Controllers
                         BorrowDate = x.borrowing_date,
                         returnDate = x.borrowing_date,
                     }));
-                    return Ok(JsonSerializer.Serialize(TH, options));
-
+                   // return Ok(JsonSerializer.Serialize(TH, options));
+                    return Ok(TH);
                 }
             }
             catch (Exception ex)

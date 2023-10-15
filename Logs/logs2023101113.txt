@@ -1,0 +1,50 @@
+2023-10-11 13:05:14.046 +04:00 [INF] User profile is available. Using 'C:\Users\TRA\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-11 13:05:14.366 +04:00 [INF] Now listening on: https://localhost:7211
+2023-10-11 13:05:14.368 +04:00 [INF] Now listening on: http://localhost:5154
+2023-10-11 13:05:14.442 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-11 13:05:14.443 +04:00 [INF] Hosting environment: Development
+2023-10-11 13:05:14.444 +04:00 [INF] Content root path: C:\Users\TRA\Desktop\TRA-Code\Library_web\
+2023-10-11 13:05:14.941 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/index.html - -
+2023-10-11 13:05:15.494 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_vs/browserLink - -
+2023-10-11 13:05:15.494 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - -
+2023-10-11 13:05:15.494 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/index.html - - - 200 - text/html;charset=utf-8 559.4470ms
+2023-10-11 13:05:15.524 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 29.9611ms
+2023-10-11 13:05:15.537 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 42.5151ms
+2023-10-11 13:05:15.619 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - -
+2023-10-11 13:05:15.738 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 119.0836ms
+2023-10-11 13:05:43.020 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/BorrowingTransactions?patronId=6&bookId=11 - 0
+2023-10-11 13:05:43.235 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BorrowingTransactionsController.CreateBorrowingTransaction (Library_web)'
+2023-10-11 13:05:43.325 +04:00 [INF] Route matched with {action = "CreateBorrowingTransaction", controller = "BorrowingTransactions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBorrowingTransaction(Int32, Int32) on controller Library_web.Controllers.BorrowingTransactionsController (Library_web).
+2023-10-11 13:05:48.870 +04:00 [INF] Executed DbCommand (236ms) [Parameters=[@__patronId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Pat_ID], [p].[Age], [p].[EmailAddress], [p].[Name]
+FROM [patronManagements] AS [p]
+WHERE [p].[Pat_ID] = @__patronId_0
+2023-10-11 13:05:49.224 +04:00 [INF] Executed DbCommand (18ms) [Parameters=[@__bookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+WHERE [b].[B_ID] = @__bookId_0
+2023-10-11 13:21:25.138 +04:00 [INF] User profile is available. Using 'C:\Users\TRA\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-11 13:21:25.618 +04:00 [INF] Now listening on: https://localhost:7211
+2023-10-11 13:21:25.619 +04:00 [INF] Now listening on: http://localhost:5154
+2023-10-11 13:21:25.623 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-11 13:21:25.623 +04:00 [INF] Hosting environment: Development
+2023-10-11 13:21:25.624 +04:00 [INF] Content root path: C:\Users\TRA\Desktop\TRA-Code\Library_web\
+2023-10-11 13:21:26.880 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/index.html - -
+2023-10-11 13:21:27.435 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/index.html - - - 200 - text/html;charset=utf-8 556.0836ms
+2023-10-11 13:21:27.435 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - -
+2023-10-11 13:21:27.435 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_vs/browserLink - -
+2023-10-11 13:21:27.461 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 25.6652ms
+2023-10-11 13:21:27.478 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 42.2364ms
+2023-10-11 13:21:27.591 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - -
+2023-10-11 13:21:27.708 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 117.4757ms
+2023-10-11 13:21:39.710 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/BorrowingTransactions?patronId=6&bookId=11 - 0
+2023-10-11 13:21:39.915 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BorrowingTransactionsController.CreateBorrowingTransaction (Library_web)'
+2023-10-11 13:21:40.014 +04:00 [INF] Route matched with {action = "CreateBorrowingTransaction", controller = "BorrowingTransactions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBorrowingTransaction(Int32, Int32) on controller Library_web.Controllers.BorrowingTransactionsController (Library_web).
+2023-10-11 13:21:46.046 +04:00 [INF] Executed DbCommand (203ms) [Parameters=[@__patronId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Pat_ID], [p].[Age], [p].[EmailAddress], [p].[Name]
+FROM [patronManagements] AS [p]
+WHERE [p].[Pat_ID] = @__patronId_0
+2023-10-11 13:21:46.352 +04:00 [INF] Executed DbCommand (12ms) [Parameters=[@__bookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+WHERE [b].[B_ID] = @__bookId_0

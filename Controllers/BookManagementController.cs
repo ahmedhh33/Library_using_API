@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Serilog;
 namespace Library_web.Controllers
 {
-    [Route("Book/BookManagement")]
+    [Route("api/[controller]")]
     [ApiController]
     public class BookManagementController : ControllerBase
     {
@@ -153,6 +153,7 @@ namespace Library_web.Controllers
                 return BadRequest("No book published in this year");
             }
         }
+        [Authorize]
         [HttpGet("GetAllBook")]
         public IActionResult GetAllBooks()
         {

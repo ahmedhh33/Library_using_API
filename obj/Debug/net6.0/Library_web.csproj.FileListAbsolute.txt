@@ -99,3 +99,4 @@ C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\Serilog.Settings.Conf
 C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\Serilog.Sinks.Console.dll
 C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
 C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\Serilog.Sinks.File.dll
+C:\Users\TRA\Desktop\TRA-Code\Library_web\bin\Debug\net6.0\Newtonsoft.Json.dll
