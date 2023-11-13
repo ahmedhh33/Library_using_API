@@ -1,0 +1,142 @@
+2023-10-25 21:18:05.863 +04:00 [INF] User profile is available. Using 'C:\Users\TRA\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-25 21:18:06.175 +04:00 [INF] Now listening on: https://localhost:7211
+2023-10-25 21:18:06.176 +04:00 [INF] Now listening on: http://localhost:5154
+2023-10-25 21:18:06.179 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-25 21:18:06.180 +04:00 [INF] Hosting environment: Development
+2023-10-25 21:18:06.181 +04:00 [INF] Content root path: C:\Users\TRA\Desktop\TRA-Code\Library_web\
+2023-10-25 21:18:07.238 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/index.html - -
+2023-10-25 21:18:07.586 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/index.html - - - 200 - text/html;charset=utf-8 350.7209ms
+2023-10-25 21:18:07.697 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - -
+2023-10-25 21:18:07.704 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 6.2410ms
+2023-10-25 21:18:07.709 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_vs/browserLink - -
+2023-10-25 21:18:07.737 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 28.5298ms
+2023-10-25 21:18:07.876 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - -
+2023-10-25 21:18:07.965 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 89.1932ms
+2023-10-25 21:19:04.292 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/PatronManagement?name=p1&emailAddress=patron1%40gmail.com&age=45&password=aaasss123 - 0
+2023-10-25 21:19:04.317 +04:00 [INF] CORS policy execution successful.
+2023-10-25 21:19:04.398 +04:00 [INF] Executing endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:19:04.468 +04:00 [INF] Route matched with {action = "AddPatron", controller = "PatronManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddPatron(System.String, System.String, Int32, System.String) on controller Library_web.Controllers.PatronManagementController (Library_web).
+2023-10-25 21:19:08.040 +04:00 [INF] Executed DbCommand (134ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [patronManagements] ([Age], [EmailAddress], [Name], [password])
+OUTPUT INSERTED.[Pat_ID]
+VALUES (@p0, @p1, @p2, @p3);
+2023-10-25 21:19:08.157 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-25 21:19:08.175 +04:00 [INF] Executed action Library_web.Controllers.PatronManagementController.AddPatron (Library_web) in 3690.7786ms
+2023-10-25 21:19:08.181 +04:00 [INF] Executed endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:19:08.190 +04:00 [INF] HTTP POST /api/PatronManagement responded 200 in 3880.4990 ms
+2023-10-25 21:19:08.207 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/PatronManagement?name=p1&emailAddress=patron1%40gmail.com&age=45&password=aaasss123 - 0 - 200 - text/plain;+charset=utf-8 3915.2481ms
+2023-10-25 21:31:58.071 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/PatronManagement - -
+2023-10-25 21:31:58.085 +04:00 [INF] CORS policy execution successful.
+2023-10-25 21:31:58.088 +04:00 [INF] HTTP OPTIONS /api/PatronManagement responded 204 in 3.9443 ms
+2023-10-25 21:31:58.099 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/PatronManagement - - - 204 - - 27.7946ms
+2023-10-25 21:31:58.103 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/PatronManagement application/json 88
+2023-10-25 21:31:58.112 +04:00 [INF] CORS policy execution successful.
+2023-10-25 21:31:58.117 +04:00 [INF] Executing endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:31:58.119 +04:00 [INF] Route matched with {action = "AddPatron", controller = "PatronManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddPatron(System.String, System.String, Int32, System.String) on controller Library_web.Controllers.PatronManagementController (Library_web).
+2023-10-25 21:31:58.150 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-25 21:31:58.185 +04:00 [INF] Executed action Library_web.Controllers.PatronManagementController.AddPatron (Library_web) in 51.3272ms
+2023-10-25 21:31:58.189 +04:00 [INF] Executed endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:31:58.195 +04:00 [INF] HTTP POST /api/PatronManagement responded 400 in 84.5626 ms
+2023-10-25 21:31:58.199 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/PatronManagement application/json 88 - 400 - application/problem+json;+charset=utf-8 96.1398ms
+2023-10-25 21:33:52.494 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/PatronManagement - -
+2023-10-25 21:33:52.498 +04:00 [INF] CORS policy execution successful.
+2023-10-25 21:33:52.499 +04:00 [INF] HTTP OPTIONS /api/PatronManagement responded 204 in 1.6260 ms
+2023-10-25 21:33:52.507 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/PatronManagement - - - 204 - - 12.8984ms
+2023-10-25 21:33:52.529 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/PatronManagement application/json 88
+2023-10-25 21:33:52.540 +04:00 [INF] CORS policy execution successful.
+2023-10-25 21:33:52.551 +04:00 [INF] Executing endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:33:52.557 +04:00 [INF] Route matched with {action = "AddPatron", controller = "PatronManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddPatron(System.String, System.String, Int32, System.String) on controller Library_web.Controllers.PatronManagementController (Library_web).
+2023-10-25 21:33:52.580 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-25 21:33:52.583 +04:00 [INF] Executed action Library_web.Controllers.PatronManagementController.AddPatron (Library_web) in 8.5532ms
+2023-10-25 21:33:52.586 +04:00 [INF] Executed endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:33:52.588 +04:00 [INF] HTTP POST /api/PatronManagement responded 400 in 48.7635 ms
+2023-10-25 21:33:52.592 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/PatronManagement application/json 88 - 400 - application/problem+json;+charset=utf-8 62.8550ms
+2023-10-25 21:35:53.509 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/PatronManagement - -
+2023-10-25 21:35:53.514 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-10-25 21:35:53.516 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-10-25 21:35:53.518 +04:00 [INF] HTTP GET /api/PatronManagement responded 405 in 3.4434 ms
+2023-10-25 21:35:53.520 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/PatronManagement - - - 405 0 - 11.1144ms
+2023-10-25 21:38:34.719 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7211/api/PatronManagement?name=weasd&emailAddress=ahmedp1@gmail.com&password=aasaa111&age=12 - 0
+2023-10-25 21:38:34.725 +04:00 [INF] Executing endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:38:34.734 +04:00 [INF] Route matched with {action = "AddPatron", controller = "PatronManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddPatron(System.String, System.String, Int32, System.String) on controller Library_web.Controllers.PatronManagementController (Library_web).
+2023-10-25 21:38:34.861 +04:00 [INF] Executed DbCommand (16ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [patronManagements] ([Age], [EmailAddress], [Name], [password])
+OUTPUT INSERTED.[Pat_ID]
+VALUES (@p0, @p1, @p2, @p3);
+2023-10-25 21:38:34.866 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-25 21:38:34.870 +04:00 [INF] Executed action Library_web.Controllers.PatronManagementController.AddPatron (Library_web) in 132.9354ms
+2023-10-25 21:38:34.873 +04:00 [INF] Executed endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:38:34.875 +04:00 [INF] HTTP POST /api/PatronManagement responded 200 in 149.7390 ms
+2023-10-25 21:38:34.878 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7211/api/PatronManagement?name=weasd&emailAddress=ahmedp1@gmail.com&password=aasaa111&age=12 - 0 - 200 - text/plain;+charset=utf-8 158.1886ms
+2023-10-25 21:41:56.770 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7211/api/PatronManagement application/json 94
+2023-10-25 21:41:56.773 +04:00 [INF] Executing endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:41:56.774 +04:00 [INF] Route matched with {action = "AddPatron", controller = "PatronManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddPatron(System.String, System.String, Int32, System.String) on controller Library_web.Controllers.PatronManagementController (Library_web).
+2023-10-25 21:41:56.778 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-25 21:41:56.781 +04:00 [INF] Executed action Library_web.Controllers.PatronManagementController.AddPatron (Library_web) in 3.7812ms
+2023-10-25 21:41:56.788 +04:00 [INF] Executed endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:41:56.792 +04:00 [INF] HTTP POST /api/PatronManagement responded 400 in 19.0162 ms
+2023-10-25 21:41:56.795 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7211/api/PatronManagement application/json 94 - 400 - application/problem+json;+charset=utf-8 24.6034ms
+2023-10-25 21:43:27.230 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7211/api/PatronManagement application/json 96
+2023-10-25 21:43:27.233 +04:00 [INF] Executing endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:43:27.235 +04:00 [INF] Route matched with {action = "AddPatron", controller = "PatronManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddPatron(System.String, System.String, Int32, System.String) on controller Library_web.Controllers.PatronManagementController (Library_web).
+2023-10-25 21:43:27.240 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-25 21:43:27.243 +04:00 [INF] Executed action Library_web.Controllers.PatronManagementController.AddPatron (Library_web) in 4.13ms
+2023-10-25 21:43:27.247 +04:00 [INF] Executed endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:43:27.250 +04:00 [INF] HTTP POST /api/PatronManagement responded 400 in 16.6012 ms
+2023-10-25 21:43:27.253 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7211/api/PatronManagement application/json 96 - 400 - application/problem+json;+charset=utf-8 23.0092ms
+2023-10-25 21:49:21.528 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/PatronManagement - -
+2023-10-25 21:49:21.532 +04:00 [INF] CORS policy execution successful.
+2023-10-25 21:49:21.534 +04:00 [INF] HTTP OPTIONS /api/PatronManagement responded 204 in 1.9527 ms
+2023-10-25 21:49:21.537 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/PatronManagement - - - 204 - - 8.6789ms
+2023-10-25 21:49:21.538 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/PatronManagement application/json 88
+2023-10-25 21:49:21.540 +04:00 [INF] CORS policy execution successful.
+2023-10-25 21:49:21.542 +04:00 [INF] Executing endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:49:21.545 +04:00 [INF] Route matched with {action = "AddPatron", controller = "PatronManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddPatron(System.String, System.String, Int32, System.String) on controller Library_web.Controllers.PatronManagementController (Library_web).
+2023-10-25 21:49:21.566 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-25 21:49:21.572 +04:00 [INF] Executed action Library_web.Controllers.PatronManagementController.AddPatron (Library_web) in 8.6478ms
+2023-10-25 21:49:21.575 +04:00 [INF] Executed endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:49:21.577 +04:00 [INF] HTTP POST /api/PatronManagement responded 400 in 36.7740 ms
+2023-10-25 21:49:21.584 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/PatronManagement application/json 88 - 400 - application/problem+json;+charset=utf-8 45.7876ms
+2023-10-25 21:51:01.787 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/PatronManagement - -
+2023-10-25 21:51:01.790 +04:00 [INF] CORS policy execution successful.
+2023-10-25 21:51:01.792 +04:00 [INF] HTTP OPTIONS /api/PatronManagement responded 204 in 1.3370 ms
+2023-10-25 21:51:01.796 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/PatronManagement - - - 204 - - 8.8194ms
+2023-10-25 21:51:01.798 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/PatronManagement application/json 88
+2023-10-25 21:51:01.800 +04:00 [INF] CORS policy execution successful.
+2023-10-25 21:51:01.803 +04:00 [INF] Executing endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:51:01.808 +04:00 [INF] Route matched with {action = "AddPatron", controller = "PatronManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddPatron(System.String, System.String, Int32, System.String) on controller Library_web.Controllers.PatronManagementController (Library_web).
+2023-10-25 21:51:01.833 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-25 21:51:01.836 +04:00 [INF] Executed action Library_web.Controllers.PatronManagementController.AddPatron (Library_web) in 3.6074ms
+2023-10-25 21:51:01.839 +04:00 [INF] Executed endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:51:01.841 +04:00 [INF] HTTP POST /api/PatronManagement responded 400 in 40.6284 ms
+2023-10-25 21:51:01.843 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/PatronManagement application/json 88 - 400 - application/problem+json;+charset=utf-8 45.5777ms
+2023-10-25 21:52:18.619 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/PatronManagement - -
+2023-10-25 21:52:18.623 +04:00 [INF] CORS policy execution successful.
+2023-10-25 21:52:18.626 +04:00 [INF] HTTP OPTIONS /api/PatronManagement responded 204 in 2.7590 ms
+2023-10-25 21:52:18.632 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/PatronManagement - - - 204 - - 12.9226ms
+2023-10-25 21:52:18.634 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/PatronManagement application/json 88
+2023-10-25 21:52:18.641 +04:00 [INF] CORS policy execution successful.
+2023-10-25 21:52:18.645 +04:00 [INF] Executing endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:52:18.655 +04:00 [INF] Route matched with {action = "AddPatron", controller = "PatronManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddPatron(System.String, System.String, Int32, System.String) on controller Library_web.Controllers.PatronManagementController (Library_web).
+2023-10-25 21:52:18.674 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-25 21:52:18.681 +04:00 [INF] Executed action Library_web.Controllers.PatronManagementController.AddPatron (Library_web) in 7.6918ms
+2023-10-25 21:52:18.683 +04:00 [INF] Executed endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:52:18.689 +04:00 [INF] HTTP POST /api/PatronManagement responded 400 in 48.6705 ms
+2023-10-25 21:52:18.695 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/PatronManagement application/json 88 - 400 - application/problem+json;+charset=utf-8 60.6555ms
+2023-10-25 21:59:54.048 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/PatronManagement - -
+2023-10-25 21:59:54.055 +04:00 [INF] CORS policy execution successful.
+2023-10-25 21:59:54.057 +04:00 [INF] HTTP OPTIONS /api/PatronManagement responded 204 in 1.5504 ms
+2023-10-25 21:59:54.068 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/PatronManagement - - - 204 - - 19.3982ms
+2023-10-25 21:59:54.071 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/PatronManagement application/json 88
+2023-10-25 21:59:54.078 +04:00 [INF] CORS policy execution successful.
+2023-10-25 21:59:54.083 +04:00 [INF] Executing endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:59:54.091 +04:00 [INF] Route matched with {action = "AddPatron", controller = "PatronManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddPatron(System.String, System.String, Int32, System.String) on controller Library_web.Controllers.PatronManagementController (Library_web).
+2023-10-25 21:59:54.107 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-25 21:59:54.110 +04:00 [INF] Executed action Library_web.Controllers.PatronManagementController.AddPatron (Library_web) in 3.6893ms
+2023-10-25 21:59:54.112 +04:00 [INF] Executed endpoint 'Library_web.Controllers.PatronManagementController.AddPatron (Library_web)'
+2023-10-25 21:59:54.114 +04:00 [INF] HTTP POST /api/PatronManagement responded 400 in 36.7852 ms
+2023-10-25 21:59:54.116 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/PatronManagement application/json 88 - 400 - application/problem+json;+charset=utf-8 45.1454ms

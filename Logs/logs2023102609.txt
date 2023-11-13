@@ -1,0 +1,136 @@
+2023-10-26 09:53:06.183 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/index.html - -
+2023-10-26 09:53:06.433 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/index.html - - - 200 - text/html;charset=utf-8 258.2424ms
+2023-10-26 09:53:06.445 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - -
+2023-10-26 09:53:06.448 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_vs/browserLink - -
+2023-10-26 09:53:06.459 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 13.5251ms
+2023-10-26 09:53:06.501 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 56.5683ms
+2023-10-26 09:53:06.565 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - -
+2023-10-26 09:53:06.690 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 125.1006ms
+2023-10-26 09:53:28.564 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - -
+2023-10-26 09:53:28.588 +04:00 [INF] CORS policy execution successful.
+2023-10-26 09:53:28.604 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-26 09:53:28.714 +04:00 [INF] Route matched with {action = "GetBookByTitle", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookByTitle(System.String) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-26 09:53:28.761 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-26 09:53:28.767 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web) in 39.5714ms
+2023-10-26 09:53:28.774 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-26 09:53:28.777 +04:00 [INF] HTTP GET /api/BookManagement/GetBookByTitle responded 400 in 193.9387 ms
+2023-10-26 09:53:28.786 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - - - 400 - application/problem+json;+charset=utf-8 222.2624ms
+2023-10-26 09:53:35.951 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook/ - -
+2023-10-26 09:53:35.959 +04:00 [INF] CORS policy execution successful.
+2023-10-26 09:53:35.960 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-26 09:53:35.964 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - -
+2023-10-26 09:53:35.964 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-26 09:53:35.966 +04:00 [INF] CORS policy execution successful.
+2023-10-26 09:53:35.981 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-26 09:53:35.983 +04:00 [INF] Route matched with {action = "GetBookByTitle", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookByTitle(System.String) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-26 09:53:35.988 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-26 09:53:35.990 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web) in 3.8726ms
+2023-10-26 09:53:35.992 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-26 09:53:35.993 +04:00 [INF] HTTP GET /api/BookManagement/GetBookByTitle responded 400 in 26.6932 ms
+2023-10-26 09:53:35.996 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - - - 400 - application/problem+json;+charset=utf-8 32.0229ms
+2023-10-26 09:53:36.023 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 44.5002ms
+2023-10-26 09:53:36.028 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-26 09:53:36.033 +04:00 [ERR] HTTP GET /api/BookManagement/GetAllBook/ responded 500 in 74.0724 ms
+System.ObjectDisposedException: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'ApplicationDbContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_ContextServices()
+   at Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Collections.Generic.IEnumerable<TEntity>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Library_web.Controllers.BookManagementController.GetAllBooks() in C:\Users\TRA\Desktop\TRA-Code\Library_web\Controllers\BookManagementController.cs:line 161
+   at lambda_method71(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-10-26 09:53:36.431 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ObjectDisposedException: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'ApplicationDbContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_ContextServices()
+   at Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Collections.Generic.IEnumerable<TEntity>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Library_web.Controllers.BookManagementController.GetAllBooks() in C:\Users\TRA\Desktop\TRA-Code\Library_web\Controllers\BookManagementController.cs:line 161
+   at lambda_method71(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-10-26 09:53:36.562 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook/ - - - 500 - text/plain;+charset=utf-8 640.5600ms
+2023-10-26 09:53:37.359 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - -
+2023-10-26 09:53:37.362 +04:00 [INF] CORS policy execution successful.
+2023-10-26 09:53:37.363 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-26 09:53:37.365 +04:00 [INF] Route matched with {action = "GetBookByTitle", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookByTitle(System.String) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-26 09:53:37.377 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-26 09:53:37.391 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web) in 14.6214ms
+2023-10-26 09:53:37.394 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-26 09:53:37.397 +04:00 [INF] HTTP GET /api/BookManagement/GetBookByTitle responded 400 in 35.2083 ms
+2023-10-26 09:53:37.401 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - - - 400 - application/problem+json;+charset=utf-8 42.2336ms
+2023-10-26 09:53:37.415 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - -
+2023-10-26 09:53:37.423 +04:00 [INF] CORS policy execution successful.
+2023-10-26 09:53:37.425 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-26 09:53:37.429 +04:00 [INF] Route matched with {action = "GetBookByTitle", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookByTitle(System.String) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-26 09:53:37.432 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-26 09:53:37.435 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web) in 3.7266ms
+2023-10-26 09:53:37.441 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-26 09:53:37.449 +04:00 [INF] HTTP GET /api/BookManagement/GetBookByTitle responded 400 in 25.7767 ms
+2023-10-26 09:53:37.456 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - - - 400 - application/problem+json;+charset=utf-8 41.0903ms
+2023-10-26 09:53:57.168 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAvailableBook/ - -
+2023-10-26 09:53:57.172 +04:00 [INF] CORS policy execution successful.
+2023-10-26 09:53:57.173 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web)'
+2023-10-26 09:53:57.198 +04:00 [INF] Route matched with {action = "GetAvailableBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAvailableBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-26 09:53:57.211 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - -
+2023-10-26 09:53:57.214 +04:00 [INF] CORS policy execution successful.
+2023-10-26 09:53:57.219 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-26 09:53:57.222 +04:00 [INF] Route matched with {action = "GetBookByTitle", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookByTitle(System.String) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-26 09:53:57.226 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-26 09:53:57.229 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web) in 3.3704ms
+2023-10-26 09:53:57.234 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-26 09:53:57.239 +04:00 [INF] HTTP GET /api/BookManagement/GetBookByTitle responded 400 in 24.4002 ms
+2023-10-26 09:53:57.241 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - - - 400 - application/problem+json;+charset=utf-8 29.3936ms
+2023-10-26 09:53:58.220 +04:00 [INF] Executed DbCommand (109ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+WHERE [b].[is_Available] = CAST(1 AS bit)
+2023-10-26 09:53:58.274 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-26 09:53:58.309 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web) in 1108.3973ms
+2023-10-26 09:53:58.321 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web)'
+2023-10-26 09:53:58.323 +04:00 [INF] HTTP GET /api/BookManagement/GetAvailableBook/ responded 200 in 1150.7812 ms
+2023-10-26 09:53:58.325 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAvailableBook/ - - - 0 - application/json;+charset=utf-8 1156.3869ms

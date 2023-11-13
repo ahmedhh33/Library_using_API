@@ -1,0 +1,505 @@
+2023-10-22 23:03:06.101 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/Login - -
+2023-10-22 23:03:06.158 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:03:06.161 +04:00 [INF] HTTP OPTIONS /api/Login responded 204 in 3.6402 ms
+2023-10-22 23:03:06.167 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/Login - - - 204 - - 65.0442ms
+2023-10-22 23:03:06.169 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Login application/json 52
+2023-10-22 23:03:06.174 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:03:06.177 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 23:03:06.182 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-22 23:03:06.198 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-22 23:03:06.212 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 22.3049ms
+2023-10-22 23:03:06.215 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 23:03:06.218 +04:00 [INF] HTTP POST /api/Login responded 400 in 44.0006 ms
+2023-10-22 23:03:06.220 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Login application/json 52 - 400 - application/problem+json;+charset=utf-8 51.4194ms
+2023-10-22 23:04:55.661 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/Login - -
+2023-10-22 23:04:55.671 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:04:55.677 +04:00 [INF] HTTP OPTIONS /api/Login responded 204 in 6.1810 ms
+2023-10-22 23:04:55.681 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/Login - - - 204 - - 19.7837ms
+2023-10-22 23:04:55.685 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Login application/json 52
+2023-10-22 23:04:55.686 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:04:55.691 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 23:04:55.697 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-22 23:04:55.702 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-22 23:04:55.704 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 5.4895ms
+2023-10-22 23:04:55.708 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 23:04:55.711 +04:00 [INF] HTTP POST /api/Login responded 400 in 24.8735 ms
+2023-10-22 23:04:55.715 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Login application/json 52 - 400 - application/problem+json;+charset=utf-8 30.2864ms
+2023-10-22 23:18:32.492 +04:00 [INF] User profile is available. Using 'C:\Users\TRA\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-22 23:18:32.848 +04:00 [INF] Now listening on: https://localhost:7211
+2023-10-22 23:18:32.851 +04:00 [INF] Now listening on: http://localhost:5154
+2023-10-22 23:18:32.857 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-22 23:18:32.860 +04:00 [INF] Hosting environment: Development
+2023-10-22 23:18:32.862 +04:00 [INF] Content root path: C:\Users\TRA\Desktop\TRA-Code\Library_web\
+2023-10-22 23:18:34.494 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/index.html - -
+2023-10-22 23:18:34.918 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/index.html - - - 200 - text/html;charset=utf-8 426.5935ms
+2023-10-22 23:18:34.919 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - -
+2023-10-22 23:18:34.923 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_vs/browserLink - -
+2023-10-22 23:18:34.931 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 12.0412ms
+2023-10-22 23:18:34.963 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 40.1307ms
+2023-10-22 23:18:35.059 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - -
+2023-10-22 23:18:35.130 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 71.0824ms
+2023-10-22 23:18:53.386 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Login?email=ahmedj12%40gmail.com&password=ahmedj12 - 0
+2023-10-22 23:18:53.408 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:18:53.496 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 23:18:53.566 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-22 23:18:57.123 +04:00 [INF] Executed DbCommand (110ms) [Parameters=[@__email_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[UserName]
+FROM [userLogins] AS [u]
+WHERE [u].[Email] = @__email_0 AND [u].[Password] = @__password_1
+2023-10-22 23:18:57.495 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-22 23:18:57.505 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 3923.6268ms
+2023-10-22 23:18:57.509 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 23:18:57.512 +04:00 [INF] HTTP POST /api/Login responded 200 in 4113.4396 ms
+2023-10-22 23:18:57.521 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Login?email=ahmedj12%40gmail.com&password=ahmedj12 - 0 - 200 - text/plain;+charset=utf-8 4135.5377ms
+2023-10-22 23:19:39.777 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/Login - -
+2023-10-22 23:19:39.782 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:19:39.786 +04:00 [INF] HTTP OPTIONS /api/Login responded 204 in 3.8463 ms
+2023-10-22 23:19:39.795 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/Login - - - 204 - - 18.5184ms
+2023-10-22 23:19:39.797 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Login application/json 52
+2023-10-22 23:19:39.799 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:19:39.801 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 23:19:39.803 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-22 23:19:39.825 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-22 23:19:39.863 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 48.8651ms
+2023-10-22 23:19:39.869 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 23:19:39.875 +04:00 [INF] HTTP POST /api/Login responded 400 in 77.1195 ms
+2023-10-22 23:19:39.878 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Login application/json 52 - 400 - application/problem+json;+charset=utf-8 81.5762ms
+2023-10-22 23:20:42.837 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/Login - -
+2023-10-22 23:20:42.845 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:20:42.847 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:20:42.850 +04:00 [INF] HTTP GET /api/Login responded 405 in 7.6253 ms
+2023-10-22 23:20:42.858 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/Login - - - 405 0 - 20.9728ms
+2023-10-22 23:20:50.567 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/Login - -
+2023-10-22 23:20:50.577 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:20:50.580 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:20:50.583 +04:00 [INF] HTTP GET /api/Login responded 405 in 5.9160 ms
+2023-10-22 23:20:50.587 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/Login - - - 405 0 - 19.9791ms
+2023-10-22 23:20:51.348 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/Login - -
+2023-10-22 23:20:51.350 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:20:51.352 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:20:51.357 +04:00 [INF] HTTP GET /api/Login responded 405 in 6.2446 ms
+2023-10-22 23:20:51.362 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/Login - - - 405 0 - 14.7317ms
+2023-10-22 23:20:51.740 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/Login - -
+2023-10-22 23:20:51.744 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:20:51.747 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:20:51.750 +04:00 [INF] HTTP GET /api/Login responded 405 in 6.5047 ms
+2023-10-22 23:20:51.754 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/Login - - - 405 0 - 13.1460ms
+2023-10-22 23:20:52.068 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/Login - -
+2023-10-22 23:20:52.070 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:20:52.071 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:20:52.073 +04:00 [INF] HTTP GET /api/Login responded 405 in 3.7396 ms
+2023-10-22 23:20:52.077 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/Login - - - 405 0 - 9.0728ms
+2023-10-22 23:20:52.425 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/Login - -
+2023-10-22 23:20:52.428 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:20:52.430 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:20:52.435 +04:00 [INF] HTTP GET /api/Login responded 405 in 6.3452 ms
+2023-10-22 23:20:52.442 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/Login - - - 405 0 - 16.2122ms
+2023-10-22 23:20:52.737 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/Login - -
+2023-10-22 23:20:52.741 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:20:52.743 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:20:52.745 +04:00 [INF] HTTP GET /api/Login responded 405 in 3.7230 ms
+2023-10-22 23:20:52.751 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/Login - - - 405 0 - 13.6125ms
+2023-10-22 23:22:01.494 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/Login - -
+2023-10-22 23:22:01.496 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:22:01.497 +04:00 [INF] HTTP OPTIONS /api/Login responded 204 in 1.3406 ms
+2023-10-22 23:22:01.502 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/Login - - - 204 - - 7.5674ms
+2023-10-22 23:22:01.503 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Login application/json 52
+2023-10-22 23:22:01.506 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:22:01.507 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 23:22:01.510 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-22 23:22:01.517 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-22 23:22:01.520 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 7.3894ms
+2023-10-22 23:22:01.524 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 23:22:01.526 +04:00 [INF] HTTP POST /api/Login responded 400 in 20.4412 ms
+2023-10-22 23:22:01.528 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Login application/json 52 - 400 - application/problem+json;+charset=utf-8 24.8907ms
+2023-10-22 23:25:43.233 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - -
+2023-10-22 23:25:43.234 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:25:43.235 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:25:43.243 +04:00 [INF] Route matched with {action = "GetBookByTitle", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookByTitle(System.String) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:25:43.247 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-22 23:25:43.248 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web) in 2.3497ms
+2023-10-22 23:25:43.250 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:25:43.251 +04:00 [INF] HTTP GET /api/BookManagement/GetBookByTitle responded 400 in 16.8947 ms
+2023-10-22 23:25:43.253 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - - - 400 - application/problem+json;+charset=utf-8 20.2844ms
+2023-10-22 23:25:45.468 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - -
+2023-10-22 23:25:45.478 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:25:45.481 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:25:45.484 +04:00 [INF] Route matched with {action = "GetBookByTitle", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookByTitle(System.String) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:25:45.522 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-22 23:25:45.528 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web) in 6.8197ms
+2023-10-22 23:25:45.530 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:25:45.532 +04:00 [INF] HTTP GET /api/BookManagement/GetBookByTitle responded 400 in 54.3455 ms
+2023-10-22 23:25:45.534 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - - - 400 - application/problem+json;+charset=utf-8 65.6067ms
+2023-10-22 23:25:51.027 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement - -
+2023-10-22 23:25:51.030 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:25:51.032 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:25:51.034 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:25:51.040 +04:00 [INF] HTTP GET /api/BookManagement responded 405 in 9.3022 ms
+2023-10-22 23:25:51.047 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement - - - 405 0 - 20.9377ms
+2023-10-22 23:25:52.573 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement - -
+2023-10-22 23:25:52.578 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:25:52.580 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:25:52.585 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:25:52.588 +04:00 [INF] HTTP GET /api/BookManagement responded 405 in 10.3953 ms
+2023-10-22 23:25:52.594 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement - - - 405 0 - 20.9453ms
+2023-10-22 23:25:57.050 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-22 23:25:57.056 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:25:57.058 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:25:57.064 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:25:57.150 +04:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-22 23:25:57.182 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-22 23:25:57.198 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 114.7699ms
+2023-10-22 23:25:57.201 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:25:57.203 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 147.0921 ms
+2023-10-22 23:25:57.205 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 155.0904ms
+2023-10-22 23:26:21.244 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-22 23:26:21.246 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:26:21.247 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:26:21.248 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:26:21.347 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-22 23:26:21.356 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-22 23:26:21.359 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 107.9189ms
+2023-10-22 23:26:21.360 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:26:21.362 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 115.8545 ms
+2023-10-22 23:26:21.364 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 119.0656ms
+2023-10-22 23:27:24.034 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-22 23:27:24.035 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:27:24.036 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:27:24.037 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:27:24.050 +04:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-22 23:27:24.053 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-22 23:27:24.056 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 16.6244ms
+2023-10-22 23:27:24.058 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:27:24.059 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 24.2110 ms
+2023-10-22 23:27:24.062 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 28.3421ms
+2023-10-22 23:28:21.507 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-22 23:28:21.509 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:28:21.510 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:28:21.511 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:28:21.527 +04:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-22 23:28:21.530 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-22 23:28:21.532 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 18.8487ms
+2023-10-22 23:28:21.537 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:28:21.538 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 29.1678 ms
+2023-10-22 23:28:21.540 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 33.0785ms
+2023-10-22 23:29:33.668 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-22 23:29:33.670 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:29:33.671 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:29:33.672 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:29:33.698 +04:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-22 23:29:33.702 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-22 23:29:33.705 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 24.8263ms
+2023-10-22 23:29:33.706 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:29:33.709 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 38.8963 ms
+2023-10-22 23:29:33.711 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 42.9859ms
+2023-10-22 23:29:52.646 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/BookManagement?title=book6&author=jdfadcn&publication_year=2232 - 0
+2023-10-22 23:29:52.649 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:29:52.650 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.AddBook (Library_web)'
+2023-10-22 23:29:52.654 +04:00 [INF] Route matched with {action = "AddBook", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddBook(System.String, System.String, Int32) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:29:52.678 +04:00 [INF] new request to add book : book6 jdfadcn 2232
+2023-10-22 23:29:52.924 +04:00 [INF] Executed DbCommand (38ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (DbType = Int32), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [bookManagements] ([author], [is_Available], [publication_year], [title])
+OUTPUT INSERTED.[B_ID]
+VALUES (@p0, @p1, @p2, @p3);
+2023-10-22 23:29:52.969 +04:00 [INF] Book : book6 added successfuly
+2023-10-22 23:29:52.970 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-22 23:29:52.972 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.AddBook (Library_web) in 313.904ms
+2023-10-22 23:29:52.976 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.AddBook (Library_web)'
+2023-10-22 23:29:52.978 +04:00 [INF] HTTP POST /api/BookManagement responded 200 in 329.1800 ms
+2023-10-22 23:29:52.980 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/BookManagement?title=book6&author=jdfadcn&publication_year=2232 - 0 - 200 - text/plain;+charset=utf-8 333.9811ms
+2023-10-22 23:29:54.523 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/BookManagement?title=book6&author=jdfadcn&publication_year=2232 - 0
+2023-10-22 23:29:54.524 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:29:54.527 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.AddBook (Library_web)'
+2023-10-22 23:29:54.529 +04:00 [INF] Route matched with {action = "AddBook", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddBook(System.String, System.String, Int32) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:29:54.534 +04:00 [INF] new request to add book : book6 jdfadcn 2232
+2023-10-22 23:29:54.540 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (DbType = Int32), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [bookManagements] ([author], [is_Available], [publication_year], [title])
+OUTPUT INSERTED.[B_ID]
+VALUES (@p0, @p1, @p2, @p3);
+2023-10-22 23:29:54.545 +04:00 [INF] Book : book6 added successfuly
+2023-10-22 23:29:54.546 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-22 23:29:54.548 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.AddBook (Library_web) in 15.2056ms
+2023-10-22 23:29:54.563 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.AddBook (Library_web)'
+2023-10-22 23:29:54.565 +04:00 [INF] HTTP POST /api/BookManagement responded 200 in 40.9089 ms
+2023-10-22 23:29:54.571 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/BookManagement?title=book6&author=jdfadcn&publication_year=2232 - 0 - 200 - text/plain;+charset=utf-8 48.4761ms
+2023-10-22 23:29:56.994 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-22 23:29:56.996 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:29:56.997 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:29:57.001 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:29:57.011 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-22 23:29:57.016 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-22 23:29:57.019 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 13.6039ms
+2023-10-22 23:29:57.022 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:29:57.029 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 32.9828 ms
+2023-10-22 23:29:57.037 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 43.1971ms
+2023-10-22 23:31:45.528 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-22 23:31:45.530 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:31:45.530 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:31:45.532 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:31:45.542 +04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-22 23:31:45.545 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-22 23:31:45.547 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 13.4802ms
+2023-10-22 23:31:45.549 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:31:45.553 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 23.4364 ms
+2023-10-22 23:31:45.555 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 27.2955ms
+2023-10-22 23:32:05.395 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-22 23:32:05.397 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:32:05.398 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:32:05.400 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:32:05.420 +04:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-22 23:32:05.427 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-22 23:32:05.434 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 28.0006ms
+2023-10-22 23:32:05.445 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:32:05.450 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 52.8976 ms
+2023-10-22 23:32:05.458 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 62.2804ms
+2023-10-22 23:32:12.660 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-22 23:32:12.662 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:32:12.663 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:32:12.664 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:32:12.681 +04:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-22 23:32:12.686 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-22 23:32:12.689 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 20.3373ms
+2023-10-22 23:32:12.691 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:32:12.693 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 30.7681 ms
+2023-10-22 23:32:12.695 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 34.3371ms
+2023-10-22 23:34:42.171 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-22 23:34:42.173 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:34:42.175 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:34:42.178 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:34:42.197 +04:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-22 23:34:42.206 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-22 23:34:42.209 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 24.707ms
+2023-10-22 23:34:42.211 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:34:42.213 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 39.6836 ms
+2023-10-22 23:34:42.217 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 46.3038ms
+2023-10-22 23:34:44.416 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-22 23:34:44.418 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:34:44.420 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:34:44.423 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:34:44.428 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-22 23:34:44.435 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-22 23:34:44.438 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 12.0624ms
+2023-10-22 23:34:44.440 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:34:44.442 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 23.6189 ms
+2023-10-22 23:34:44.445 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 28.4533ms
+2023-10-22 23:35:20.686 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - -
+2023-10-22 23:35:20.688 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:35:20.689 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:35:20.691 +04:00 [INF] Route matched with {action = "GetBookByTitle", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookByTitle(System.String) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:35:20.696 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-22 23:35:20.700 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web) in 5.046ms
+2023-10-22 23:35:20.702 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:35:20.704 +04:00 [INF] HTTP GET /api/BookManagement/GetBookByTitle responded 400 in 16.4245 ms
+2023-10-22 23:35:20.707 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - - - 400 - application/problem+json;+charset=utf-8 20.5272ms
+2023-10-22 23:35:26.293 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-22 23:35:26.300 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:35:26.301 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:35:26.308 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:35:26.358 +04:00 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-22 23:35:26.362 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-22 23:35:26.364 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 53.2847ms
+2023-10-22 23:35:26.371 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:35:26.373 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 73.2616 ms
+2023-10-22 23:35:26.375 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 81.9254ms
+2023-10-22 23:35:31.020 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/BookManagement?id=1021 - -
+2023-10-22 23:35:31.025 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:35:31.029 +04:00 [INF] HTTP OPTIONS /api/BookManagement responded 204 in 4.3626 ms
+2023-10-22 23:35:31.041 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/BookManagement?id=1021 - - - 204 - - 20.8565ms
+2023-10-22 23:35:31.044 +04:00 [INF] Request starting HTTP/2 DELETE https://localhost:7211/api/BookManagement?id=1021 - -
+2023-10-22 23:35:31.060 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:35:31.063 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.Remove (Library_web)'
+2023-10-22 23:35:31.066 +04:00 [INF] Route matched with {action = "Remove", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Remove(Int32) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:35:31.122 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[@__ID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+WHERE [b].[B_ID] = @__ID_0
+2023-10-22 23:35:31.227 +04:00 [INF] Executed DbCommand (66ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [bookManagements]
+OUTPUT 1
+WHERE [B_ID] = @p0;
+2023-10-22 23:35:31.245 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-22 23:35:31.247 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.Remove (Library_web) in 175.6374ms
+2023-10-22 23:35:31.251 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.Remove (Library_web)'
+2023-10-22 23:35:31.253 +04:00 [INF] HTTP DELETE /api/BookManagement responded 200 in 192.8727 ms
+2023-10-22 23:35:31.261 +04:00 [INF] Request finished HTTP/2 DELETE https://localhost:7211/api/BookManagement?id=1021 - - - 200 - text/plain;+charset=utf-8 217.0800ms
+2023-10-22 23:35:37.021 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement - -
+2023-10-22 23:35:37.025 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:35:37.027 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:35:37.029 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-10-22 23:35:37.033 +04:00 [INF] HTTP GET /api/BookManagement responded 405 in 7.9193 ms
+2023-10-22 23:35:37.036 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement - - - 405 0 - 14.2631ms
+2023-10-22 23:36:47.129 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - -
+2023-10-22 23:36:47.131 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:36:47.132 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:36:47.134 +04:00 [INF] Route matched with {action = "GetBookByTitle", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookByTitle(System.String) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:36:47.138 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-22 23:36:47.139 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web) in 2.7975ms
+2023-10-22 23:36:47.141 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:36:47.144 +04:00 [INF] HTTP GET /api/BookManagement/GetBookByTitle responded 400 in 12.6860 ms
+2023-10-22 23:36:47.147 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - - - 400 - application/problem+json;+charset=utf-8 18.2378ms
+2023-10-22 23:36:53.351 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-22 23:36:53.355 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:36:53.357 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:36:53.360 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:36:53.411 +04:00 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-22 23:36:53.417 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-22 23:36:53.422 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 57.5355ms
+2023-10-22 23:36:53.424 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:36:53.431 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 76.4385 ms
+2023-10-22 23:36:53.434 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 82.8893ms
+2023-10-22 23:37:23.126 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - -
+2023-10-22 23:37:23.128 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:37:23.129 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:37:23.130 +04:00 [INF] Route matched with {action = "GetBookByTitle", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookByTitle(System.String) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:37:23.137 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-22 23:37:23.140 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web) in 4.1664ms
+2023-10-22 23:37:23.143 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:37:23.145 +04:00 [INF] HTTP GET /api/BookManagement/GetBookByTitle responded 400 in 17.3987 ms
+2023-10-22 23:37:23.146 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - - - 400 - application/problem+json;+charset=utf-8 20.9704ms
+2023-10-22 23:37:29.595 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook/ - -
+2023-10-22 23:37:29.598 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:37:29.600 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:37:29.603 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:37:29.622 +04:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-22 23:37:29.627 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-22 23:37:29.629 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 20.0364ms
+2023-10-22 23:37:29.633 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:37:29.637 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook/ responded 200 in 39.1861 ms
+2023-10-22 23:37:29.641 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook/ - - - 200 - application/json;+charset=utf-8 46.1090ms
+2023-10-22 23:37:46.766 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAvailableBook/ - -
+2023-10-22 23:37:46.772 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:37:46.779 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web)'
+2023-10-22 23:37:46.788 +04:00 [INF] Route matched with {action = "GetAvailableBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAvailableBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:37:46.829 +04:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+WHERE [b].[is_Available] = CAST(1 AS bit)
+2023-10-22 23:37:46.832 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-22 23:37:46.834 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web) in 39.8148ms
+2023-10-22 23:37:46.841 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web)'
+2023-10-22 23:37:46.842 +04:00 [INF] HTTP GET /api/BookManagement/GetAvailableBook/ responded 200 in 70.4715 ms
+2023-10-22 23:37:46.846 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAvailableBook/ - - - 200 - application/json;+charset=utf-8 79.8635ms
+2023-10-22 23:41:03.549 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - -
+2023-10-22 23:41:03.554 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:41:03.556 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:41:03.558 +04:00 [INF] Route matched with {action = "GetBookByTitle", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookByTitle(System.String) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:41:03.561 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-22 23:41:03.563 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web) in 2.6538ms
+2023-10-22 23:41:03.565 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:41:03.566 +04:00 [INF] HTTP GET /api/BookManagement/GetBookByTitle responded 400 in 11.9544 ms
+2023-10-22 23:41:03.568 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - - - 400 - application/problem+json;+charset=utf-8 19.3441ms
+2023-10-22 23:45:12.428 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - -
+2023-10-22 23:45:12.430 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:45:12.431 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:45:12.433 +04:00 [INF] Route matched with {action = "GetBookByTitle", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookByTitle(System.String) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:45:12.437 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-22 23:45:12.439 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web) in 3.1967ms
+2023-10-22 23:45:12.441 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:45:12.443 +04:00 [INF] HTTP GET /api/BookManagement/GetBookByTitle responded 400 in 13.4074 ms
+2023-10-22 23:45:12.447 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - - - 400 - application/problem+json;+charset=utf-8 18.9883ms
+2023-10-22 23:45:34.495 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - -
+2023-10-22 23:45:34.497 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:45:34.498 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:45:34.500 +04:00 [INF] Route matched with {action = "GetBookByTitle", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookByTitle(System.String) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:45:34.504 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-22 23:45:34.507 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web) in 3.1003ms
+2023-10-22 23:45:34.511 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:45:34.514 +04:00 [INF] HTTP GET /api/BookManagement/GetBookByTitle responded 400 in 16.7834 ms
+2023-10-22 23:45:34.518 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - - - 400 - application/problem+json;+charset=utf-8 23.8067ms
+2023-10-22 23:47:45.854 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - -
+2023-10-22 23:47:45.858 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:47:45.863 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:47:45.881 +04:00 [INF] Route matched with {action = "GetBookByTitle", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookByTitle(System.String) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:47:45.913 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-22 23:47:45.918 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web) in 9.9903ms
+2023-10-22 23:47:45.932 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:47:45.936 +04:00 [INF] HTTP GET /api/BookManagement/GetBookByTitle responded 400 in 77.9409 ms
+2023-10-22 23:47:45.939 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - - - 400 - application/problem+json;+charset=utf-8 84.9477ms
+2023-10-22 23:48:26.020 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - -
+2023-10-22 23:48:26.023 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:48:26.025 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:48:26.028 +04:00 [INF] Route matched with {action = "GetBookByTitle", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookByTitle(System.String) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:48:26.033 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-22 23:48:26.035 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web) in 2.9593ms
+2023-10-22 23:48:26.037 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:48:26.038 +04:00 [INF] HTTP GET /api/BookManagement/GetBookByTitle responded 400 in 15.1897 ms
+2023-10-22 23:48:26.040 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - - - 400 - application/problem+json;+charset=utf-8 20.6856ms
+2023-10-22 23:50:57.313 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - -
+2023-10-22 23:50:57.316 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:50:57.318 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:50:57.320 +04:00 [INF] Route matched with {action = "GetBookByTitle", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookByTitle(System.String) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:50:57.329 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-22 23:50:57.332 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web) in 4.7765ms
+2023-10-22 23:50:57.335 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetBookByTitle (Library_web)'
+2023-10-22 23:50:57.336 +04:00 [INF] HTTP GET /api/BookManagement/GetBookByTitle responded 400 in 20.4368 ms
+2023-10-22 23:50:57.338 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetBookByTitle?title= - - - 400 - application/problem+json;+charset=utf-8 25.7594ms
+2023-10-22 23:51:05.584 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-22 23:51:05.587 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:51:05.588 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:51:05.590 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:51:05.628 +04:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-22 23:51:05.633 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-22 23:51:05.636 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 42.6474ms
+2023-10-22 23:51:05.638 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:51:05.639 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 52.5183 ms
+2023-10-22 23:51:05.641 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 56.3734ms
+2023-10-22 23:52:26.402 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-22 23:52:26.405 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:52:26.407 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:52:26.409 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:52:26.427 +04:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-22 23:52:26.435 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-22 23:52:26.438 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 24.9223ms
+2023-10-22 23:52:26.442 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:52:26.444 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 39.2970 ms
+2023-10-22 23:52:26.446 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 44.6763ms
+2023-10-22 23:55:08.549 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-22 23:55:08.552 +04:00 [INF] CORS policy execution successful.
+2023-10-22 23:55:08.553 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:55:08.555 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-22 23:55:08.568 +04:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-22 23:55:08.572 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-22 23:55:08.575 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 15.7969ms
+2023-10-22 23:55:08.576 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-22 23:55:08.578 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 26.3951 ms
+2023-10-22 23:55:08.581 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 31.9115ms

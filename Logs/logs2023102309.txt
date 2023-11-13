@@ -1,0 +1,64 @@
+2023-10-23 09:12:02.226 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook/ - -
+2023-10-23 09:12:02.279 +04:00 [INF] CORS policy execution successful.
+2023-10-23 09:12:02.281 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-23 09:12:02.285 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-23 09:12:02.313 +04:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-23 09:12:02.320 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-23 09:12:02.325 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 33.9246ms
+2023-10-23 09:12:02.328 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-23 09:12:02.333 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook/ responded 200 in 53.5912 ms
+2023-10-23 09:12:02.338 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook/ - - - 200 - application/json;+charset=utf-8 112.4882ms
+2023-10-23 09:13:44.868 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/Login - -
+2023-10-23 09:13:44.870 +04:00 [INF] CORS policy execution successful.
+2023-10-23 09:13:44.877 +04:00 [INF] HTTP OPTIONS /api/Login responded 204 in 7.2407 ms
+2023-10-23 09:13:44.882 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/Login - - - 204 - - 14.2619ms
+2023-10-23 09:13:44.885 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Login application/json 52
+2023-10-23 09:13:44.889 +04:00 [INF] CORS policy execution successful.
+2023-10-23 09:13:44.890 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-23 09:13:44.893 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-23 09:13:44.916 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-23 09:13:44.919 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 18.0994ms
+2023-10-23 09:13:44.923 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-23 09:13:44.927 +04:00 [INF] HTTP POST /api/Login responded 400 in 38.4105 ms
+2023-10-23 09:13:44.929 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Login application/json 52 - 400 - application/problem+json;+charset=utf-8 44.1902ms
+2023-10-23 09:16:49.834 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/Login - -
+2023-10-23 09:16:49.836 +04:00 [INF] CORS policy execution successful.
+2023-10-23 09:16:49.838 +04:00 [INF] HTTP OPTIONS /api/Login responded 204 in 1.8838 ms
+2023-10-23 09:16:49.841 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/Login - - - 204 - - 6.8081ms
+2023-10-23 09:16:49.848 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Login application/json 52
+2023-10-23 09:16:49.856 +04:00 [INF] CORS policy execution successful.
+2023-10-23 09:16:49.871 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-23 09:16:49.873 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-23 09:16:49.878 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-23 09:16:49.887 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 10.3623ms
+2023-10-23 09:16:49.891 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-23 09:16:49.896 +04:00 [INF] HTTP POST /api/Login responded 400 in 39.0197 ms
+2023-10-23 09:16:49.898 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Login application/json 52 - 400 - application/problem+json;+charset=utf-8 50.7352ms
+2023-10-23 09:19:11.455 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/Login - -
+2023-10-23 09:19:11.456 +04:00 [INF] CORS policy execution successful.
+2023-10-23 09:19:11.457 +04:00 [INF] HTTP OPTIONS /api/Login responded 204 in 1.2641 ms
+2023-10-23 09:19:11.464 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/Login - - - 204 - - 9.2406ms
+2023-10-23 09:19:11.466 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Login application/json 52
+2023-10-23 09:19:11.471 +04:00 [INF] CORS policy execution successful.
+2023-10-23 09:19:11.473 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-23 09:19:11.476 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-23 09:19:11.482 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-23 09:19:11.486 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 4.2588ms
+2023-10-23 09:19:11.488 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-23 09:19:11.489 +04:00 [INF] HTTP POST /api/Login responded 400 in 18.2082 ms
+2023-10-23 09:19:11.492 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Login application/json 52 - 400 - application/problem+json;+charset=utf-8 26.1075ms
+2023-10-23 09:56:24.784 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/Login - -
+2023-10-23 09:56:24.789 +04:00 [INF] CORS policy execution successful.
+2023-10-23 09:56:24.795 +04:00 [INF] HTTP OPTIONS /api/Login responded 204 in 6.3622 ms
+2023-10-23 09:56:24.806 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/Login - - - 204 - - 24.8083ms
+2023-10-23 09:56:24.809 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Login application/json 52
+2023-10-23 09:56:24.812 +04:00 [INF] CORS policy execution successful.
+2023-10-23 09:56:24.815 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-23 09:56:24.824 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-23 09:56:24.846 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-23 09:56:24.849 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 11.9049ms
+2023-10-23 09:56:24.853 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-23 09:56:24.857 +04:00 [INF] HTTP POST /api/Login responded 400 in 45.0594 ms
+2023-10-23 09:56:24.860 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Login application/json 52 - 400 - application/problem+json;+charset=utf-8 51.1941ms

@@ -1,0 +1,37 @@
+2023-10-28 10:29:26.606 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-28 10:29:26.648 +04:00 [INF] CORS policy execution successful.
+2023-10-28 10:29:26.653 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-28 10:29:26.659 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-28 10:29:26.729 +04:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-28 10:29:26.738 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-28 10:29:26.742 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 73.2145ms
+2023-10-28 10:29:26.746 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-28 10:29:26.747 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 98.3765 ms
+2023-10-28 10:29:26.753 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 148.9171ms
+2023-10-28 10:32:45.930 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAvailableBook/ - -
+2023-10-28 10:32:45.932 +04:00 [INF] CORS policy execution successful.
+2023-10-28 10:32:45.933 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web)'
+2023-10-28 10:32:45.936 +04:00 [INF] Route matched with {action = "GetAvailableBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAvailableBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-28 10:32:45.970 +04:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+WHERE [b].[is_Available] = CAST(1 AS bit)
+2023-10-28 10:32:45.973 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-28 10:32:45.978 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web) in 38.7553ms
+2023-10-28 10:32:45.981 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web)'
+2023-10-28 10:32:45.983 +04:00 [INF] HTTP GET /api/BookManagement/GetAvailableBook/ responded 200 in 51.4457 ms
+2023-10-28 10:32:45.987 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAvailableBook/ - - - 200 - application/json;+charset=utf-8 57.5676ms
+2023-10-28 10:48:00.952 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-28 10:48:00.954 +04:00 [INF] CORS policy execution successful.
+2023-10-28 10:48:00.955 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-28 10:48:00.956 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-28 10:48:00.997 +04:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-28 10:48:01.003 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-28 10:48:01.005 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 47.4779ms
+2023-10-28 10:48:01.010 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-28 10:48:01.012 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 58.2424 ms
+2023-10-28 10:48:01.014 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 62.4110ms

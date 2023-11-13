@@ -1,0 +1,207 @@
+2023-10-22 21:09:20.646 +04:00 [INF] User profile is available. Using 'C:\Users\TRA\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-22 21:09:20.840 +04:00 [INF] Now listening on: https://localhost:7211
+2023-10-22 21:09:20.843 +04:00 [INF] Now listening on: http://localhost:5154
+2023-10-22 21:09:20.846 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-22 21:09:20.847 +04:00 [INF] Hosting environment: Development
+2023-10-22 21:09:20.847 +04:00 [INF] Content root path: C:\Users\TRA\Desktop\TRA-Code\Library_web\
+2023-10-22 21:09:21.836 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/index.html - -
+2023-10-22 21:09:22.268 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/index.html - - - 200 - text/html;charset=utf-8 438.7925ms
+2023-10-22 21:09:22.271 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - -
+2023-10-22 21:09:22.271 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_vs/browserLink - -
+2023-10-22 21:09:22.277 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 6.0732ms
+2023-10-22 21:09:22.298 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 27.0493ms
+2023-10-22 21:09:22.513 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - -
+2023-10-22 21:09:22.593 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 80.4328ms
+2023-10-22 21:10:11.630 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/index.html - -
+2023-10-22 21:10:11.646 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/index.html - - - 200 - text/html;charset=utf-8 15.7861ms
+2023-10-22 21:10:11.669 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - -
+2023-10-22 21:10:11.669 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_vs/browserLink - -
+2023-10-22 21:10:11.671 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 2.5630ms
+2023-10-22 21:10:11.680 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.7068ms
+2023-10-22 21:10:11.861 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - -
+2023-10-22 21:10:11.869 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 7.9492ms
+2023-10-22 21:10:24.649 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/index.html - -
+2023-10-22 21:10:24.656 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/index.html - - - 200 - text/html;charset=utf-8 6.1801ms
+2023-10-22 21:10:24.664 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - -
+2023-10-22 21:10:24.666 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 1.4540ms
+2023-10-22 21:10:24.675 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_vs/browserLink - -
+2023-10-22 21:10:24.695 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 19.9055ms
+2023-10-22 21:10:24.813 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - -
+2023-10-22 21:10:24.817 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 3.8591ms
+2023-10-22 21:13:45.455 +04:00 [INF] User profile is available. Using 'C:\Users\TRA\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-22 21:13:45.839 +04:00 [INF] Now listening on: https://localhost:7211
+2023-10-22 21:13:45.841 +04:00 [INF] Now listening on: http://localhost:5154
+2023-10-22 21:13:45.846 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-22 21:13:45.847 +04:00 [INF] Hosting environment: Development
+2023-10-22 21:13:45.847 +04:00 [INF] Content root path: C:\Users\TRA\Desktop\TRA-Code\Library_web\
+2023-10-22 21:13:46.835 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/index.html - -
+2023-10-22 21:13:47.438 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - -
+2023-10-22 21:13:47.450 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_vs/browserLink - -
+2023-10-22 21:13:47.462 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 23.1840ms
+2023-10-22 21:13:47.467 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/index.html - - - 200 - text/html;charset=utf-8 635.9795ms
+2023-10-22 21:13:47.530 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 79.7614ms
+2023-10-22 21:13:47.648 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - -
+2023-10-22 21:13:47.754 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 105.9030ms
+2023-10-22 21:27:33.776 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 - -
+2023-10-22 21:27:33.803 +04:00 [INF] CORS policy execution successful.
+2023-10-22 21:27:33.815 +04:00 [INF] HTTP OPTIONS /api/Login responded 204 in 17.5162 ms
+2023-10-22 21:27:33.837 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 - - - 204 - - 61.3950ms
+2023-10-22 21:27:33.857 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 application/json 52
+2023-10-22 21:27:33.861 +04:00 [INF] CORS policy execution successful.
+2023-10-22 21:27:34.083 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 21:27:34.159 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-22 21:27:37.167 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 application/json 52
+2023-10-22 21:27:37.173 +04:00 [INF] CORS policy execution successful.
+2023-10-22 21:27:37.176 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 21:27:37.188 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-22 21:27:39.307 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 - -
+2023-10-22 21:27:39.310 +04:00 [INF] CORS policy execution successful.
+2023-10-22 21:27:39.312 +04:00 [INF] HTTP OPTIONS /api/Login responded 204 in 1.5688 ms
+2023-10-22 21:27:39.315 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 - - - 204 - - 7.6911ms
+2023-10-22 21:27:39.317 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 application/json 52
+2023-10-22 21:27:39.319 +04:00 [INF] CORS policy execution successful.
+2023-10-22 21:27:39.323 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 21:27:39.325 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-22 21:27:39.335 +04:00 [INF] Executed DbCommand (215ms) [Parameters=[@__email_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[UserName]
+FROM [userLogins] AS [u]
+WHERE [u].[Email] = @__email_0 AND [u].[Password] = @__password_1
+2023-10-22 21:27:39.335 +04:00 [INF] Executed DbCommand (215ms) [Parameters=[@__email_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[UserName]
+FROM [userLogins] AS [u]
+WHERE [u].[Email] = @__email_0 AND [u].[Password] = @__password_1
+2023-10-22 21:27:39.453 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[UserName]
+FROM [userLogins] AS [u]
+WHERE [u].[Email] = @__email_0 AND [u].[Password] = @__password_1
+2023-10-22 21:27:39.920 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-22 21:27:39.920 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-22 21:27:39.920 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-22 21:27:39.937 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 2722.4871ms
+2023-10-22 21:27:39.938 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 5767.3273ms
+2023-10-22 21:27:39.937 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 597.05ms
+2023-10-22 21:27:39.944 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 21:27:39.945 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 21:27:39.946 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 21:27:39.948 +04:00 [INF] HTTP POST /api/Login responded 200 in 2775.9204 ms
+2023-10-22 21:27:39.951 +04:00 [INF] HTTP POST /api/Login responded 200 in 6090.1126 ms
+2023-10-22 21:27:39.953 +04:00 [INF] HTTP POST /api/Login responded 200 in 634.2963 ms
+2023-10-22 21:27:39.998 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 application/json 52 - 200 - text/plain;+charset=utf-8 2830.3716ms
+2023-10-22 21:27:39.998 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 application/json 52 - 200 - text/plain;+charset=utf-8 681.4423ms
+2023-10-22 21:27:39.998 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 application/json 52 - 200 - text/plain;+charset=utf-8 6140.9768ms
+2023-10-22 21:32:56.850 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 - -
+2023-10-22 21:32:56.861 +04:00 [INF] CORS policy execution successful.
+2023-10-22 21:32:56.862 +04:00 [INF] HTTP OPTIONS /api/Login responded 204 in 1.0856 ms
+2023-10-22 21:32:56.864 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 - - - 204 - - 14.5563ms
+2023-10-22 21:32:56.867 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 application/json 52
+2023-10-22 21:32:56.868 +04:00 [INF] CORS policy execution successful.
+2023-10-22 21:32:56.870 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 21:32:56.871 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-22 21:32:56.900 +04:00 [INF] Executed DbCommand (17ms) [Parameters=[@__email_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[UserName]
+FROM [userLogins] AS [u]
+WHERE [u].[Email] = @__email_0 AND [u].[Password] = @__password_1
+2023-10-22 21:32:56.911 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-22 21:32:56.917 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 41.9854ms
+2023-10-22 21:32:56.922 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 21:32:56.926 +04:00 [INF] HTTP POST /api/Login responded 200 in 57.9446 ms
+2023-10-22 21:32:56.931 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 application/json 52 - 200 - text/plain;+charset=utf-8 63.9325ms
+2023-10-22 21:41:05.579 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 - -
+2023-10-22 21:41:05.582 +04:00 [INF] CORS policy execution successful.
+2023-10-22 21:41:05.584 +04:00 [INF] HTTP OPTIONS /api/Login responded 204 in 1.7200 ms
+2023-10-22 21:41:05.586 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 - - - 204 - - 7.2549ms
+2023-10-22 21:41:05.595 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 application/json 52
+2023-10-22 21:41:05.597 +04:00 [INF] CORS policy execution successful.
+2023-10-22 21:41:05.600 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 21:41:05.603 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-22 21:41:05.637 +04:00 [INF] Executed DbCommand (20ms) [Parameters=[@__email_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[UserName]
+FROM [userLogins] AS [u]
+WHERE [u].[Email] = @__email_0 AND [u].[Password] = @__password_1
+2023-10-22 21:41:05.641 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-22 21:41:05.643 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 37.5583ms
+2023-10-22 21:41:05.646 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 21:41:05.648 +04:00 [INF] HTTP POST /api/Login responded 200 in 51.5269 ms
+2023-10-22 21:41:05.650 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 application/json 52 - 200 - text/plain;+charset=utf-8 54.8804ms
+2023-10-22 21:44:20.971 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 - -
+2023-10-22 21:44:20.981 +04:00 [INF] CORS policy execution successful.
+2023-10-22 21:44:20.984 +04:00 [INF] HTTP OPTIONS /api/Login responded 204 in 4.6746 ms
+2023-10-22 21:44:20.987 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 - - - 204 - - 17.1325ms
+2023-10-22 21:44:20.994 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 application/json 52
+2023-10-22 21:44:20.996 +04:00 [INF] CORS policy execution successful.
+2023-10-22 21:44:20.999 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 21:44:21.001 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-22 21:44:21.022 +04:00 [INF] Executed DbCommand (15ms) [Parameters=[@__email_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[UserName]
+FROM [userLogins] AS [u]
+WHERE [u].[Email] = @__email_0 AND [u].[Password] = @__password_1
+2023-10-22 21:44:21.028 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-22 21:44:21.031 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 26.0483ms
+2023-10-22 21:44:21.035 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 21:44:21.036 +04:00 [INF] HTTP POST /api/Login responded 200 in 39.8767 ms
+2023-10-22 21:44:21.038 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 application/json 52 - 200 - text/plain;+charset=utf-8 44.5012ms
+2023-10-22 21:46:10.354 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 - -
+2023-10-22 21:46:10.380 +04:00 [INF] CORS policy execution successful.
+2023-10-22 21:46:10.381 +04:00 [INF] HTTP OPTIONS /api/Login responded 204 in 0.8909 ms
+2023-10-22 21:46:10.382 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 - - - 204 - - 29.0010ms
+2023-10-22 21:46:10.388 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 application/json 52
+2023-10-22 21:46:10.389 +04:00 [INF] CORS policy execution successful.
+2023-10-22 21:46:10.391 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 21:46:10.392 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-22 21:46:10.407 +04:00 [INF] Executed DbCommand (10ms) [Parameters=[@__email_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[UserName]
+FROM [userLogins] AS [u]
+WHERE [u].[Email] = @__email_0 AND [u].[Password] = @__password_1
+2023-10-22 21:46:10.410 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-22 21:46:10.411 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 16.6086ms
+2023-10-22 21:46:10.416 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 21:46:10.425 +04:00 [INF] HTTP POST /api/Login responded 200 in 36.1157 ms
+2023-10-22 21:46:10.437 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 application/json 52 - 200 - text/plain;+charset=utf-8 48.6350ms
+2023-10-22 21:50:47.248 +04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 - -
+2023-10-22 21:50:47.252 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-10-22 21:50:47.256 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-10-22 21:50:47.258 +04:00 [INF] HTTP GET /api/Login responded 405 in 6.5369 ms
+2023-10-22 21:50:47.265 +04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 - - - 405 0 - 16.4089ms
+2023-10-22 21:52:00.521 +04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 - -
+2023-10-22 21:52:00.527 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-10-22 21:52:00.529 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-10-22 21:52:00.532 +04:00 [INF] HTTP GET /api/Login responded 405 in 4.7214 ms
+2023-10-22 21:52:00.535 +04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7211/api/Login?email=ahmedj12@gmail.com&password=ahmedj12 - - - 405 0 - 14.1950ms
+2023-10-22 21:52:28.484 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Login?email=ahmedj12%40gmail.com&password=ahmedj12 - 0
+2023-10-22 21:52:28.492 +04:00 [INF] CORS policy execution successful.
+2023-10-22 21:52:28.493 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 21:52:28.496 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-22 21:52:28.522 +04:00 [INF] Executed DbCommand (13ms) [Parameters=[@__email_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[Password], [u].[UserName]
+FROM [userLogins] AS [u]
+WHERE [u].[Email] = @__email_0 AND [u].[Password] = @__password_1
+2023-10-22 21:52:28.527 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-22 21:52:28.530 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 31.7141ms
+2023-10-22 21:52:28.532 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-22 21:52:28.534 +04:00 [INF] HTTP POST /api/Login responded 200 in 42.0822 ms
+2023-10-22 21:52:28.536 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Login?email=ahmedj12%40gmail.com&password=ahmedj12 - 0 - 200 - text/plain;+charset=utf-8 52.3658ms
+2023-10-22 21:52:59.993 +04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7211/api/Login?email=ahmedj12%40gmail.com&password=ahmedj12 - -
+2023-10-22 21:53:00.006 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-10-22 21:53:00.008 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-10-22 21:53:00.010 +04:00 [INF] HTTP GET /api/Login responded 405 in 3.5336 ms
+2023-10-22 21:53:00.013 +04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7211/api/Login?email=ahmedj12%40gmail.com&password=ahmedj12 - - - 405 0 - 19.5897ms
+2023-10-22 21:53:27.779 +04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7211/api/Login?email=ahmedj12@40gmail.com&password=ahmedj12 - -
+2023-10-22 21:53:27.783 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-10-22 21:53:27.785 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-10-22 21:53:27.787 +04:00 [INF] HTTP GET /api/Login responded 405 in 3.5947 ms
+2023-10-22 21:53:27.789 +04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7211/api/Login?email=ahmedj12@40gmail.com&password=ahmedj12 - - - 405 0 - 12.1158ms
+2023-10-22 21:56:12.786 +04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7211/api/Login application/json 69
+2023-10-22 21:56:12.791 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-10-22 21:56:12.792 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-10-22 21:56:12.793 +04:00 [INF] HTTP GET /api/Login responded 405 in 2.7406 ms
+2023-10-22 21:56:12.796 +04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7211/api/Login application/json 69 - 405 0 - 14.1653ms
+2023-10-22 21:57:01.809 +04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7211/api/Login text/plain 69
+2023-10-22 21:57:01.817 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-10-22 21:57:01.818 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-10-22 21:57:01.819 +04:00 [INF] HTTP GET /api/Login responded 405 in 2.7673 ms
+2023-10-22 21:57:01.826 +04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7211/api/Login text/plain 69 - 405 0 - 17.1954ms
+2023-10-22 21:57:09.861 +04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7211/api/Login application/json 69
+2023-10-22 21:57:09.862 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-10-22 21:57:09.864 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-10-22 21:57:09.865 +04:00 [INF] HTTP GET /api/Login responded 405 in 2.9511 ms
+2023-10-22 21:57:09.867 +04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7211/api/Login application/json 69 - 405 0 - 6.8569ms

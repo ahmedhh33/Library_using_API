@@ -1,0 +1,60 @@
+2023-10-28 11:44:10.987 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/BorrowingTransactions - 0
+2023-10-28 11:44:11.048 +04:00 [INF] CORS policy execution successful.
+2023-10-28 11:44:11.357 +04:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-10-28 11:44:11.418 +04:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-10-28 11:44:11.422 +04:00 [INF] HTTP POST /api/BorrowingTransactions responded 401 in 386.1342 ms
+2023-10-28 11:44:11.435 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/BorrowingTransactions - 0 - 401 0 - 460.2563ms
+2023-10-28 11:46:56.766 +04:00 [INF] User profile is available. Using 'C:\Users\TRA\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-28 11:46:57.201 +04:00 [INF] Now listening on: https://localhost:7211
+2023-10-28 11:46:57.204 +04:00 [INF] Now listening on: http://localhost:5154
+2023-10-28 11:46:57.210 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-28 11:46:57.214 +04:00 [INF] Hosting environment: Development
+2023-10-28 11:46:57.214 +04:00 [INF] Content root path: C:\Users\TRA\Desktop\TRA-Code\Library_web\
+2023-10-28 11:46:57.797 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/index.html - -
+2023-10-28 11:46:58.098 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/index.html - - - 200 - text/html;charset=utf-8 303.8190ms
+2023-10-28 11:46:58.100 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - -
+2023-10-28 11:46:58.103 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_vs/browserLink - -
+2023-10-28 11:46:58.107 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 6.5153ms
+2023-10-28 11:46:58.123 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.3174ms
+2023-10-28 11:46:58.202 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - -
+2023-10-28 11:46:58.316 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 113.4848ms
+2023-10-28 11:50:07.842 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAvailableBook/ - -
+2023-10-28 11:50:07.862 +04:00 [INF] CORS policy execution successful.
+2023-10-28 11:50:07.959 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web)'
+2023-10-28 11:50:08.002 +04:00 [INF] Route matched with {action = "GetAvailableBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAvailableBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-28 11:50:11.010 +04:00 [INF] Executed DbCommand (72ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+WHERE [b].[is_Available] = CAST(1 AS bit)
+2023-10-28 11:50:11.166 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-28 11:50:11.213 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web) in 3194.3005ms
+2023-10-28 11:50:11.217 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web)'
+2023-10-28 11:50:11.223 +04:00 [INF] HTTP GET /api/BookManagement/GetAvailableBook/ responded 200 in 3368.2880 ms
+2023-10-28 11:50:11.240 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAvailableBook/ - - - 200 - application/json;+charset=utf-8 3397.9251ms
+2023-10-28 11:54:00.981 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAvailableBook/ - -
+2023-10-28 11:54:00.990 +04:00 [INF] CORS policy execution successful.
+2023-10-28 11:54:00.992 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web)'
+2023-10-28 11:54:00.998 +04:00 [INF] Route matched with {action = "GetAvailableBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAvailableBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-28 11:54:01.047 +04:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+WHERE [b].[is_Available] = CAST(1 AS bit)
+2023-10-28 11:54:01.062 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-28 11:54:01.064 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web) in 50.9405ms
+2023-10-28 11:54:01.068 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web)'
+2023-10-28 11:54:01.078 +04:00 [INF] HTTP GET /api/BookManagement/GetAvailableBook/ responded 200 in 89.0163 ms
+2023-10-28 11:54:01.091 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAvailableBook/ - - - 200 - application/json;+charset=utf-8 109.7761ms
+2023-10-28 11:55:34.551 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAvailableBook/ - -
+2023-10-28 11:55:34.572 +04:00 [INF] CORS policy execution successful.
+2023-10-28 11:55:34.578 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web)'
+2023-10-28 11:55:34.580 +04:00 [INF] Route matched with {action = "GetAvailableBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAvailableBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-28 11:55:34.700 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+WHERE [b].[is_Available] = CAST(1 AS bit)
+2023-10-28 11:55:34.706 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-28 11:55:34.708 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web) in 119.1266ms
+2023-10-28 11:55:34.714 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web)'
+2023-10-28 11:55:34.716 +04:00 [INF] HTTP GET /api/BookManagement/GetAvailableBook/ responded 200 in 160.9677 ms
+2023-10-28 11:55:34.721 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAvailableBook/ - - - 200 - application/json;+charset=utf-8 170.1375ms

@@ -22,10 +22,10 @@ namespace Library_web
 
 
             //cors service
-            string txt = "";
+           
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy(txt,
+                options.AddPolicy("AllowAll",
                 builder =>
                 {
                     builder.AllowAnyOrigin();
@@ -48,7 +48,7 @@ namespace Library_web
                     ValidateIssuer = true,
                     ValidateIssuerSigningKey = true,
                     ValidIssuer = "ahmed",
-                    ValidAudience = "TRA",
+                    ValidAudience = "all",
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("this is my custom Secret key for authentication"))
 
                 };
@@ -76,7 +76,7 @@ namespace Library_web
             app.UseSerilogRequestLogging();//selN
 
             app.UseHttpsRedirection();
-
+            app.UseCors("AllowAll");
             app.UseAuthentication(); //JWT
             app.UseAuthorization();
 

@@ -1,0 +1,43 @@
+2023-10-29 20:53:37.185 +04:00 [INF] User profile is available. Using 'C:\Users\TRA\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-29 20:53:37.571 +04:00 [INF] Now listening on: https://localhost:7211
+2023-10-29 20:53:37.572 +04:00 [INF] Now listening on: http://localhost:5154
+2023-10-29 20:53:37.576 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-29 20:53:37.577 +04:00 [INF] Hosting environment: Development
+2023-10-29 20:53:37.577 +04:00 [INF] Content root path: C:\Users\TRA\Desktop\TRA-Code\Library_web\
+2023-10-29 20:53:38.240 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/index.html - -
+2023-10-29 20:53:38.705 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/index.html - - - 200 - text/html;charset=utf-8 467.5424ms
+2023-10-29 20:53:38.711 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - -
+2023-10-29 20:53:38.712 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_vs/browserLink - -
+2023-10-29 20:53:38.717 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 6.5180ms
+2023-10-29 20:53:38.739 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 26.8522ms
+2023-10-29 20:53:38.837 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - -
+2023-10-29 20:53:38.928 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 91.1578ms
+2023-10-29 20:54:02.827 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-29 20:54:02.843 +04:00 [INF] CORS policy execution successful.
+2023-10-29 20:54:02.931 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-29 20:54:02.975 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-29 20:54:06.161 +04:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-29 20:54:06.223 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-29 20:54:06.262 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 3276.3341ms
+2023-10-29 20:54:06.265 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-29 20:54:06.270 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 3433.1965 ms
+2023-10-29 20:54:06.285 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 3457.9023ms
+2023-10-29 20:54:14.044 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/BookManagement?title=BOOK1&author=AOTHER1&publication_year=2008 - 0
+2023-10-29 20:54:14.052 +04:00 [INF] CORS policy execution successful.
+2023-10-29 20:54:14.053 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.AddBook (Library_web)'
+2023-10-29 20:54:14.081 +04:00 [INF] Route matched with {action = "AddBook", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddBook(System.String, System.String, Int32) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-29 20:54:14.134 +04:00 [INF] new request to add book : BOOK1 AOTHER1 2008
+2023-10-29 20:54:14.578 +04:00 [INF] Executed DbCommand (88ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (DbType = Int32), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [bookManagements] ([author], [is_Available], [publication_year], [title])
+OUTPUT INSERTED.[B_ID]
+VALUES (@p0, @p1, @p2, @p3);
+2023-10-29 20:54:14.645 +04:00 [INF] Book : BOOK1 added successfuly
+2023-10-29 20:54:14.649 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-29 20:54:14.654 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.AddBook (Library_web) in 570.3614ms
+2023-10-29 20:54:14.659 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.AddBook (Library_web)'
+2023-10-29 20:54:14.661 +04:00 [INF] HTTP POST /api/BookManagement responded 200 in 609.1497 ms
+2023-10-29 20:54:14.668 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/BookManagement?title=BOOK1&author=AOTHER1&publication_year=2008 - 0 - 200 - text/plain;+charset=utf-8 623.4790ms

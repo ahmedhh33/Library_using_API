@@ -15,7 +15,7 @@ namespace Library_web.Models
         public int publication_year { get; set; }
         [Required]
         public bool is_Available { get; set; }
-
+        
         public List<BorrowingTransactions> borrowingTransactions { get; set; }
     }
 }

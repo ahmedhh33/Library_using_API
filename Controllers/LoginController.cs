@@ -28,13 +28,16 @@ namespace Library_web.Controllers
                 var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
 
-                var data = new List<Claim>();
-                data.Add(new Claim("UserName", user.UserName));
+                var data = new List<Claim>
+                {
+                    new Claim("email",user.Password)
+                };
+                //data.Add(new Claim("UserName", user.UserName)); 
 
 
                 var token = new JwtSecurityToken(
                 issuer: "ahmed",
-                audience: "TRA",
+                audience: "all",
                 claims: data,
                 expires: DateTime.Now.AddMinutes(120),
                 signingCredentials: credentials

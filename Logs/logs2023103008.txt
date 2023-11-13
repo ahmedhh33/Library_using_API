@@ -1,0 +1,265 @@
+2023-10-30 08:13:51.968 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAvailableBook/ - -
+2023-10-30 08:13:52.033 +04:00 [INF] CORS policy execution successful.
+2023-10-30 08:13:52.053 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web)'
+2023-10-30 08:13:52.061 +04:00 [INF] Route matched with {action = "GetAvailableBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAvailableBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-30 08:13:52.402 +04:00 [INF] Executed DbCommand (149ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+WHERE [b].[is_Available] = CAST(1 AS bit)
+2023-10-30 08:13:52.436 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-30 08:13:52.452 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web) in 381.7315ms
+2023-10-30 08:13:52.455 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web)'
+2023-10-30 08:13:52.461 +04:00 [INF] HTTP GET /api/BookManagement/GetAvailableBook/ responded 200 in 429.2810 ms
+2023-10-30 08:13:52.466 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAvailableBook/ - - - 200 - application/json;+charset=utf-8 506.2734ms
+2023-10-30 08:14:06.390 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-30 08:14:06.392 +04:00 [INF] CORS policy execution successful.
+2023-10-30 08:14:06.393 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-30 08:14:06.397 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-30 08:14:06.407 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-30 08:14:06.411 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-30 08:14:06.414 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 14.0827ms
+2023-10-30 08:14:06.417 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-30 08:14:06.420 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 28.0004 ms
+2023-10-30 08:14:06.424 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 33.8629ms
+2023-10-30 08:22:24.473 +04:00 [INF] User profile is available. Using 'C:\Users\TRA\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-10-30 08:22:24.850 +04:00 [INF] Now listening on: https://localhost:7211
+2023-10-30 08:22:24.852 +04:00 [INF] Now listening on: http://localhost:5154
+2023-10-30 08:22:24.857 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-30 08:22:24.861 +04:00 [INF] Hosting environment: Development
+2023-10-30 08:22:24.866 +04:00 [INF] Content root path: C:\Users\TRA\Desktop\TRA-Code\Library_web\
+2023-10-30 08:22:25.485 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/index.html - -
+2023-10-30 08:22:25.809 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/index.html - - - 200 - text/html;charset=utf-8 325.8095ms
+2023-10-30 08:22:25.833 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - -
+2023-10-30 08:22:25.838 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 4.6427ms
+2023-10-30 08:22:25.838 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_vs/browserLink - -
+2023-10-30 08:22:25.865 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 27.5017ms
+2023-10-30 08:22:25.967 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - -
+2023-10-30 08:22:26.043 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 76.1902ms
+2023-10-30 08:23:31.371 +04:00 [INF] Request starting HTTP/2 PUT https://localhost:7211/api/BorrowingTransactions - 0
+2023-10-30 08:23:31.397 +04:00 [INF] CORS policy execution successful.
+2023-10-30 08:23:31.489 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BorrowingTransactionsController.MarkBookAsRetburned (Library_web)'
+2023-10-30 08:23:31.565 +04:00 [INF] Route matched with {action = "MarkBookAsRetburned", controller = "BorrowingTransactions"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult MarkBookAsRetburned(Int32) on controller Library_web.Controllers.BorrowingTransactionsController (Library_web).
+2023-10-30 08:23:35.225 +04:00 [INF] Executed DbCommand (111ms) [Parameters=[@__transactionId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[TraID], [b].[B_ID], [b].[Pat_ID], [b].[borrowing_date], [b].[return_date]
+FROM [BorrowingTransactions] AS [b]
+WHERE [b].[TraID] = @__transactionId_0
+2023-10-30 08:23:35.284 +04:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-10-30 08:23:35.304 +04:00 [INF] Executed action Library_web.Controllers.BorrowingTransactionsController.MarkBookAsRetburned (Library_web) in 3710.3871ms
+2023-10-30 08:23:35.312 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BorrowingTransactionsController.MarkBookAsRetburned (Library_web)'
+2023-10-30 08:23:35.326 +04:00 [INF] HTTP PUT /api/BorrowingTransactions responded 404 in 3936.9909 ms
+2023-10-30 08:23:35.348 +04:00 [INF] Request finished HTTP/2 PUT https://localhost:7211/api/BorrowingTransactions - 0 - 404 - text/plain;+charset=utf-8 3977.3543ms
+2023-10-30 08:24:31.026 +04:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7211/api/BorrowingTransactions?transactionId=1 - 0
+2023-10-30 08:24:31.036 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BorrowingTransactionsController.MarkBookAsRetburned (Library_web)'
+2023-10-30 08:24:31.038 +04:00 [INF] Route matched with {action = "MarkBookAsRetburned", controller = "BorrowingTransactions"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult MarkBookAsRetburned(Int32) on controller Library_web.Controllers.BorrowingTransactionsController (Library_web).
+2023-10-30 08:24:31.088 +04:00 [INF] Executed DbCommand (18ms) [Parameters=[@__transactionId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[TraID], [b].[B_ID], [b].[Pat_ID], [b].[borrowing_date], [b].[return_date]
+FROM [BorrowingTransactions] AS [b]
+WHERE [b].[TraID] = @__transactionId_0
+2023-10-30 08:24:31.221 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__transaction_B_ID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+WHERE [b].[B_ID] = @__transaction_B_ID_0
+2023-10-30 08:24:31.501 +04:00 [INF] Executed DbCommand (28ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p2='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [BorrowingTransactions] SET [return_date] = @p0
+OUTPUT 1
+WHERE [TraID] = @p1;
+UPDATE [bookManagements] SET [is_Available] = @p2
+OUTPUT 1
+WHERE [B_ID] = @p3;
+2023-10-30 08:24:31.536 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-30 08:24:31.539 +04:00 [INF] Executed action Library_web.Controllers.BorrowingTransactionsController.MarkBookAsRetburned (Library_web) in 497.8693ms
+2023-10-30 08:24:31.541 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BorrowingTransactionsController.MarkBookAsRetburned (Library_web)'
+2023-10-30 08:24:31.543 +04:00 [INF] HTTP PUT /api/BorrowingTransactions responded 200 in 507.7377 ms
+2023-10-30 08:24:31.547 +04:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7211/api/BorrowingTransactions?transactionId=1 - 0 - 200 - text/plain;+charset=utf-8 520.5878ms
+2023-10-30 08:41:47.837 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/BorrowingTransactions?transactionId=1 - -
+2023-10-30 08:41:47.843 +04:00 [INF] CORS policy execution successful.
+2023-10-30 08:41:47.845 +04:00 [INF] HTTP OPTIONS /api/BorrowingTransactions responded 204 in 4.1316 ms
+2023-10-30 08:41:47.855 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/BorrowingTransactions?transactionId=1 - - - 204 - - 18.1573ms
+2023-10-30 08:41:47.858 +04:00 [INF] Request starting HTTP/2 PUT https://localhost:7211/api/BorrowingTransactions?transactionId=1 - 0
+2023-10-30 08:41:47.859 +04:00 [INF] CORS policy execution successful.
+2023-10-30 08:41:47.865 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BorrowingTransactionsController.MarkBookAsRetburned (Library_web)'
+2023-10-30 08:41:47.867 +04:00 [INF] Route matched with {action = "MarkBookAsRetburned", controller = "BorrowingTransactions"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult MarkBookAsRetburned(Int32) on controller Library_web.Controllers.BorrowingTransactionsController (Library_web).
+2023-10-30 08:41:48.009 +04:00 [INF] Executed DbCommand (15ms) [Parameters=[@__transactionId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[TraID], [b].[B_ID], [b].[Pat_ID], [b].[borrowing_date], [b].[return_date]
+FROM [BorrowingTransactions] AS [b]
+WHERE [b].[TraID] = @__transactionId_0
+2023-10-30 08:41:48.017 +04:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-10-30 08:41:48.021 +04:00 [INF] Executed action Library_web.Controllers.BorrowingTransactionsController.MarkBookAsRetburned (Library_web) in 151.0626ms
+2023-10-30 08:41:48.025 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BorrowingTransactionsController.MarkBookAsRetburned (Library_web)'
+2023-10-30 08:41:48.030 +04:00 [INF] HTTP PUT /api/BorrowingTransactions responded 404 in 171.1003 ms
+2023-10-30 08:41:48.037 +04:00 [INF] Request finished HTTP/2 PUT https://localhost:7211/api/BorrowingTransactions?transactionId=1 - 0 - 404 - text/plain;+charset=utf-8 178.8092ms
+2023-10-30 08:41:52.729 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/BorrowingTransactions?transactionId=1 - -
+2023-10-30 08:41:52.732 +04:00 [INF] CORS policy execution successful.
+2023-10-30 08:41:52.733 +04:00 [INF] HTTP OPTIONS /api/BorrowingTransactions responded 204 in 1.0970 ms
+2023-10-30 08:41:52.736 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/BorrowingTransactions?transactionId=1 - - - 204 - - 7.2641ms
+2023-10-30 08:41:52.738 +04:00 [INF] Request starting HTTP/2 PUT https://localhost:7211/api/BorrowingTransactions?transactionId=1 - 0
+2023-10-30 08:41:52.740 +04:00 [INF] CORS policy execution successful.
+2023-10-30 08:41:52.741 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BorrowingTransactionsController.MarkBookAsRetburned (Library_web)'
+2023-10-30 08:41:52.744 +04:00 [INF] Route matched with {action = "MarkBookAsRetburned", controller = "BorrowingTransactions"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult MarkBookAsRetburned(Int32) on controller Library_web.Controllers.BorrowingTransactionsController (Library_web).
+2023-10-30 08:41:52.800 +04:00 [INF] Executed DbCommand (45ms) [Parameters=[@__transactionId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[TraID], [b].[B_ID], [b].[Pat_ID], [b].[borrowing_date], [b].[return_date]
+FROM [BorrowingTransactions] AS [b]
+WHERE [b].[TraID] = @__transactionId_0
+2023-10-30 08:41:52.804 +04:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-10-30 08:41:52.806 +04:00 [INF] Executed action Library_web.Controllers.BorrowingTransactionsController.MarkBookAsRetburned (Library_web) in 53.5049ms
+2023-10-30 08:41:52.808 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BorrowingTransactionsController.MarkBookAsRetburned (Library_web)'
+2023-10-30 08:41:52.809 +04:00 [INF] HTTP PUT /api/BorrowingTransactions responded 404 in 69.9155 ms
+2023-10-30 08:41:52.814 +04:00 [INF] Request finished HTTP/2 PUT https://localhost:7211/api/BorrowingTransactions?transactionId=1 - 0 - 404 - text/plain;+charset=utf-8 76.1945ms
+2023-10-30 08:42:20.943 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BorrowingTransactions?transactionId=1 - -
+2023-10-30 08:42:20.951 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-10-30 08:42:20.952 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-10-30 08:42:20.953 +04:00 [INF] HTTP GET /api/BorrowingTransactions responded 405 in 2.3200 ms
+2023-10-30 08:42:20.956 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BorrowingTransactions?transactionId=1 - - - 405 0 - 12.7275ms
+2023-10-30 08:43:26.718 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-30 08:43:26.720 +04:00 [INF] CORS policy execution successful.
+2023-10-30 08:43:26.721 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-30 08:43:26.727 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-30 08:43:26.762 +04:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-30 08:43:26.776 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-30 08:43:26.836 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 103.3013ms
+2023-10-30 08:43:26.840 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-30 08:43:26.842 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 122.6386 ms
+2023-10-30 08:43:26.847 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 129.2790ms
+2023-10-30 08:43:45.517 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/BookManagement?title=book23&author=AOTHER23&publication_year=2016 - 0
+2023-10-30 08:43:45.526 +04:00 [INF] CORS policy execution successful.
+2023-10-30 08:43:45.527 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.AddBook (Library_web)'
+2023-10-30 08:43:45.535 +04:00 [INF] Route matched with {action = "AddBook", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddBook(System.String, System.String, Int32) on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-30 08:43:45.561 +04:00 [INF] new request to add book : book23 AOTHER23 2016
+2023-10-30 08:43:45.649 +04:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Boolean), @p2='?' (DbType = Int32), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [bookManagements] ([author], [is_Available], [publication_year], [title])
+OUTPUT INSERTED.[B_ID]
+VALUES (@p0, @p1, @p2, @p3);
+2023-10-30 08:43:45.680 +04:00 [INF] Book : book23 added successfuly
+2023-10-30 08:43:45.682 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-30 08:43:45.684 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.AddBook (Library_web) in 136.6599ms
+2023-10-30 08:43:45.686 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.AddBook (Library_web)'
+2023-10-30 08:43:45.690 +04:00 [INF] HTTP POST /api/BookManagement responded 200 in 164.0019 ms
+2023-10-30 08:43:45.694 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/BookManagement?title=book23&author=AOTHER23&publication_year=2016 - 0 - 200 - text/plain;+charset=utf-8 176.6304ms
+2023-10-30 08:43:47.984 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - -
+2023-10-30 08:43:47.990 +04:00 [INF] CORS policy execution successful.
+2023-10-30 08:43:47.991 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-30 08:43:47.992 +04:00 [INF] Route matched with {action = "GetAllBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-30 08:43:48.004 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+2023-10-30 08:43:48.009 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-30 08:43:48.012 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAllBooks (Library_web) in 13.7681ms
+2023-10-30 08:43:48.017 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAllBooks (Library_web)'
+2023-10-30 08:43:48.019 +04:00 [INF] HTTP GET /api/BookManagement/GetAllBook responded 200 in 29.3876 ms
+2023-10-30 08:43:48.030 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAllBook - - - 200 - application/json;+charset=utf-8 46.3193ms
+2023-10-30 08:44:10.690 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BookManagement/GetAvailableBook/ - -
+2023-10-30 08:44:10.694 +04:00 [INF] CORS policy execution successful.
+2023-10-30 08:44:10.700 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web)'
+2023-10-30 08:44:10.705 +04:00 [INF] Route matched with {action = "GetAvailableBooks", controller = "BookManagement"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAvailableBooks() on controller Library_web.Controllers.BookManagementController (Library_web).
+2023-10-30 08:44:10.725 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+WHERE [b].[is_Available] = CAST(1 AS bit)
+2023-10-30 08:44:10.732 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Library_web.Models.BookManagement, Library_web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-10-30 08:44:10.735 +04:00 [INF] Executed action Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web) in 27.4015ms
+2023-10-30 08:44:10.737 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BookManagementController.GetAvailableBooks (Library_web)'
+2023-10-30 08:44:10.741 +04:00 [INF] HTTP GET /api/BookManagement/GetAvailableBook/ responded 200 in 46.5603 ms
+2023-10-30 08:44:10.745 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BookManagement/GetAvailableBook/ - - - 200 - application/json;+charset=utf-8 54.7362ms
+2023-10-30 08:44:26.475 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/BorrowingTransactions?patronId=1&bookId=3&AccountNumber=10460&AccountHolderID=3 - 0
+2023-10-30 08:44:26.480 +04:00 [INF] CORS policy execution successful.
+2023-10-30 08:44:26.482 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BorrowingTransactionsController.CreateBorrowingTransaction (Library_web)'
+2023-10-30 08:44:26.517 +04:00 [INF] Route matched with {action = "CreateBorrowingTransaction", controller = "BorrowingTransactions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBorrowingTransaction(Int32, Int32, Int32, Int32) on controller Library_web.Controllers.BorrowingTransactionsController (Library_web).
+2023-10-30 08:44:26.547 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[@__patronId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Pat_ID], [p].[Age], [p].[EmailAddress], [p].[Name], [p].[password]
+FROM [patronManagements] AS [p]
+WHERE [p].[Pat_ID] = @__patronId_0
+2023-10-30 08:44:26.577 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__bookId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+WHERE [b].[B_ID] = @__bookId_0
+2023-10-30 08:44:27.068 +04:00 [INF] Executed DbCommand (18ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p5='?' (DbType = Int32), @p4='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [BorrowingTransactions] ([B_ID], [Pat_ID], [borrowing_date], [return_date])
+OUTPUT INSERTED.[TraID]
+VALUES (@p0, @p1, @p2, @p3);
+UPDATE [bookManagements] SET [is_Available] = @p4
+OUTPUT 1
+WHERE [B_ID] = @p5;
+2023-10-30 08:44:27.086 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-30 08:44:27.091 +04:00 [INF] Executed action Library_web.Controllers.BorrowingTransactionsController.CreateBorrowingTransaction (Library_web) in 567.234ms
+2023-10-30 08:44:27.093 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BorrowingTransactionsController.CreateBorrowingTransaction (Library_web)'
+2023-10-30 08:44:27.101 +04:00 [INF] HTTP POST /api/BorrowingTransactions responded 200 in 620.9982 ms
+2023-10-30 08:44:27.104 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/BorrowingTransactions?patronId=1&bookId=3&AccountNumber=10460&AccountHolderID=3 - 0 - 200 - text/plain;+charset=utf-8 628.9896ms
+2023-10-30 08:45:01.373 +04:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7211/api/BorrowingTransactions?transactionId=2 - -
+2023-10-30 08:45:01.376 +04:00 [INF] CORS policy execution successful.
+2023-10-30 08:45:01.382 +04:00 [INF] HTTP OPTIONS /api/BorrowingTransactions responded 204 in 6.0199 ms
+2023-10-30 08:45:01.386 +04:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7211/api/BorrowingTransactions?transactionId=2 - - - 204 - - 13.8483ms
+2023-10-30 08:45:01.388 +04:00 [INF] Request starting HTTP/2 PUT https://localhost:7211/api/BorrowingTransactions?transactionId=2 - 0
+2023-10-30 08:45:01.391 +04:00 [INF] CORS policy execution successful.
+2023-10-30 08:45:01.395 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BorrowingTransactionsController.MarkBookAsRetburned (Library_web)'
+2023-10-30 08:45:01.396 +04:00 [INF] Route matched with {action = "MarkBookAsRetburned", controller = "BorrowingTransactions"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult MarkBookAsRetburned(Int32) on controller Library_web.Controllers.BorrowingTransactionsController (Library_web).
+2023-10-30 08:45:01.405 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__transactionId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[TraID], [b].[B_ID], [b].[Pat_ID], [b].[borrowing_date], [b].[return_date]
+FROM [BorrowingTransactions] AS [b]
+WHERE [b].[TraID] = @__transactionId_0
+2023-10-30 08:45:01.417 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[@__transaction_B_ID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[B_ID], [b].[author], [b].[is_Available], [b].[publication_year], [b].[title]
+FROM [bookManagements] AS [b]
+WHERE [b].[B_ID] = @__transaction_B_ID_0
+2023-10-30 08:45:01.433 +04:00 [INF] Executed DbCommand (8ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p2='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [BorrowingTransactions] SET [return_date] = @p0
+OUTPUT 1
+WHERE [TraID] = @p1;
+UPDATE [bookManagements] SET [is_Available] = @p2
+OUTPUT 1
+WHERE [B_ID] = @p3;
+2023-10-30 08:45:01.443 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-30 08:45:01.448 +04:00 [INF] Executed action Library_web.Controllers.BorrowingTransactionsController.MarkBookAsRetburned (Library_web) in 49.2257ms
+2023-10-30 08:45:01.452 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BorrowingTransactionsController.MarkBookAsRetburned (Library_web)'
+2023-10-30 08:45:01.455 +04:00 [INF] HTTP PUT /api/BorrowingTransactions responded 200 in 64.0698 ms
+2023-10-30 08:45:01.460 +04:00 [INF] Request finished HTTP/2 PUT https://localhost:7211/api/BorrowingTransactions?transactionId=2 - 0 - 200 - text/plain;+charset=utf-8 71.7537ms
+2023-10-30 08:54:07.919 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BorrowingTransactions/GetTransactionHistoryForPatron - -
+2023-10-30 08:54:07.928 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BorrowingTransactionsController.GetTransactionHistoryForPatron (Library_web)'
+2023-10-30 08:54:07.940 +04:00 [INF] Route matched with {action = "GetTransactionHistoryForPatron", controller = "BorrowingTransactions"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetTransactionHistoryForPatron(Int32) on controller Library_web.Controllers.BorrowingTransactionsController (Library_web).
+2023-10-30 08:54:08.332 +04:00 [INF] Executed DbCommand (45ms) [Parameters=[@__patronId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Pat_ID], [t].[Age], [t].[EmailAddress], [t].[Name], [t].[password], [t0].[TraID], [t0].[B_ID], [t0].[Pat_ID], [t0].[borrowing_date], [t0].[return_date], [t0].[B_ID0], [t0].[author], [t0].[is_Available], [t0].[publication_year], [t0].[title]
+FROM (
+    SELECT TOP(1) [p].[Pat_ID], [p].[Age], [p].[EmailAddress], [p].[Name], [p].[password]
+    FROM [patronManagements] AS [p]
+    WHERE [p].[Pat_ID] = @__patronId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [b].[TraID], [b].[B_ID], [b].[Pat_ID], [b].[borrowing_date], [b].[return_date], [b0].[B_ID] AS [B_ID0], [b0].[author], [b0].[is_Available], [b0].[publication_year], [b0].[title]
+    FROM [BorrowingTransactions] AS [b]
+    INNER JOIN [bookManagements] AS [b0] ON [b].[B_ID] = [b0].[B_ID]
+) AS [t0] ON [t].[Pat_ID] = [t0].[Pat_ID]
+ORDER BY [t].[Pat_ID], [t0].[TraID]
+2023-10-30 08:54:08.337 +04:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-10-30 08:54:08.339 +04:00 [INF] Executed action Library_web.Controllers.BorrowingTransactionsController.GetTransactionHistoryForPatron (Library_web) in 392.7375ms
+2023-10-30 08:54:08.341 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BorrowingTransactionsController.GetTransactionHistoryForPatron (Library_web)'
+2023-10-30 08:54:08.352 +04:00 [INF] HTTP GET /api/BorrowingTransactions/GetTransactionHistoryForPatron responded 404 in 425.0703 ms
+2023-10-30 08:54:08.358 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BorrowingTransactions/GetTransactionHistoryForPatron - - - 404 - text/plain;+charset=utf-8 439.9240ms
+2023-10-30 08:54:33.745 +04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7211/api/BorrowingTransactions/GetTransactionHistoryForPatron?patronId=1 - -
+2023-10-30 08:54:33.755 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BorrowingTransactionsController.GetTransactionHistoryForPatron (Library_web)'
+2023-10-30 08:54:33.757 +04:00 [INF] Route matched with {action = "GetTransactionHistoryForPatron", controller = "BorrowingTransactions"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetTransactionHistoryForPatron(Int32) on controller Library_web.Controllers.BorrowingTransactionsController (Library_web).
+2023-10-30 08:54:33.788 +04:00 [INF] Executed DbCommand (24ms) [Parameters=[@__patronId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Pat_ID], [t].[Age], [t].[EmailAddress], [t].[Name], [t].[password], [t0].[TraID], [t0].[B_ID], [t0].[Pat_ID], [t0].[borrowing_date], [t0].[return_date], [t0].[B_ID0], [t0].[author], [t0].[is_Available], [t0].[publication_year], [t0].[title]
+FROM (
+    SELECT TOP(1) [p].[Pat_ID], [p].[Age], [p].[EmailAddress], [p].[Name], [p].[password]
+    FROM [patronManagements] AS [p]
+    WHERE [p].[Pat_ID] = @__patronId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [b].[TraID], [b].[B_ID], [b].[Pat_ID], [b].[borrowing_date], [b].[return_date], [b0].[B_ID] AS [B_ID0], [b0].[author], [b0].[is_Available], [b0].[publication_year], [b0].[title]
+    FROM [BorrowingTransactions] AS [b]
+    INNER JOIN [bookManagements] AS [b0] ON [b].[B_ID] = [b0].[B_ID]
+) AS [t0] ON [t].[Pat_ID] = [t0].[Pat_ID]
+ORDER BY [t].[Pat_ID], [t0].[TraID]
+2023-10-30 08:54:33.879 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-30 08:54:33.882 +04:00 [INF] Executed action Library_web.Controllers.BorrowingTransactionsController.GetTransactionHistoryForPatron (Library_web) in 121.2436ms
+2023-10-30 08:54:33.884 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BorrowingTransactionsController.GetTransactionHistoryForPatron (Library_web)'
+2023-10-30 08:54:33.888 +04:00 [INF] HTTP GET /api/BorrowingTransactions/GetTransactionHistoryForPatron responded 200 in 132.9342 ms
+2023-10-30 08:54:33.893 +04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7211/api/BorrowingTransactions/GetTransactionHistoryForPatron?patronId=1 - - - 200 - text/plain;+charset=utf-8 148.2855ms

@@ -1,0 +1,68 @@
+2023-10-29 12:01:54.008 +04:00 [INF] Executed DbCommand (619ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [library_EFCORE_final];
+2023-10-29 12:01:54.332 +04:00 [INF] Executed DbCommand (283ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [library_EFCORE_final] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2023-10-29 12:01:54.376 +04:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-10-29 12:01:54.492 +04:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2023-10-29 12:01:54.494 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-10-29 12:01:54.515 +04:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-10-29 12:01:54.543 +04:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-10-29 12:01:54.563 +04:00 [INF] Applying migration '20231029080033_add'.
+2023-10-29 12:01:54.608 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [bookManagements] (
+    [B_ID] int NOT NULL IDENTITY,
+    [title] nvarchar(max) NOT NULL,
+    [author] nvarchar(max) NOT NULL,
+    [publication_year] int NOT NULL,
+    [is_Available] bit NOT NULL,
+    CONSTRAINT [PK_bookManagements] PRIMARY KEY ([B_ID])
+);
+2023-10-29 12:01:54.611 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [patronManagements] (
+    [Pat_ID] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [EmailAddress] nvarchar(max) NOT NULL,
+    [Age] int NOT NULL,
+    [password] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_patronManagements] PRIMARY KEY ([Pat_ID])
+);
+2023-10-29 12:01:54.614 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [userLogins] (
+    [UserId] int NOT NULL IDENTITY,
+    [UserName] nvarchar(max) NOT NULL,
+    [Password] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_userLogins] PRIMARY KEY ([UserId])
+);
+2023-10-29 12:01:54.620 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [BorrowingTransactions] (
+    [TraID] int NOT NULL IDENTITY,
+    [borrowing_date] datetime2 NOT NULL,
+    [return_date] datetime2 NULL,
+    [B_ID] int NOT NULL,
+    [Pat_ID] int NOT NULL,
+    CONSTRAINT [PK_BorrowingTransactions] PRIMARY KEY ([TraID]),
+    CONSTRAINT [FK_BorrowingTransactions_bookManagements_B_ID] FOREIGN KEY ([B_ID]) REFERENCES [bookManagements] ([B_ID]) ON DELETE CASCADE,
+    CONSTRAINT [FK_BorrowingTransactions_patronManagements_Pat_ID] FOREIGN KEY ([Pat_ID]) REFERENCES [patronManagements] ([Pat_ID]) ON DELETE CASCADE
+);
+2023-10-29 12:01:54.628 +04:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_BorrowingTransactions_B_ID] ON [BorrowingTransactions] ([B_ID]);
+2023-10-29 12:01:54.630 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_BorrowingTransactions_Pat_ID] ON [BorrowingTransactions] ([Pat_ID]);
+2023-10-29 12:01:54.644 +04:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20231029080033_add', N'7.0.11');

@@ -1,0 +1,41 @@
+2023-10-23 10:17:07.426 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7211/api/Login application/json 70
+2023-10-23 10:17:07.442 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-23 10:17:07.446 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-23 10:17:07.454 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-23 10:17:07.484 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 32.2784ms
+2023-10-23 10:17:07.492 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-23 10:17:07.502 +04:00 [INF] HTTP POST /api/Login responded 400 in 59.8389 ms
+2023-10-23 10:17:07.504 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7211/api/Login application/json 70 - 400 - application/problem+json;+charset=utf-8 79.7983ms
+2023-10-23 10:17:53.315 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/index.html - -
+2023-10-23 10:17:53.405 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/index.html - - - 200 - text/html;charset=utf-8 90.1418ms
+2023-10-23 10:17:53.413 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - -
+2023-10-23 10:17:53.421 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/_vs/browserLink - -
+2023-10-23 10:17:53.423 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 9.4669ms
+2023-10-23 10:17:53.452 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.1386ms
+2023-10-23 10:17:53.532 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - -
+2023-10-23 10:17:53.599 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 66.6972ms
+2023-10-23 10:18:09.478 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7211/api/Login application/json 70
+2023-10-23 10:18:09.481 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-23 10:18:09.484 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-23 10:18:09.488 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-23 10:18:09.493 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 5.6991ms
+2023-10-23 10:18:09.498 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-23 10:18:09.501 +04:00 [INF] HTTP POST /api/Login responded 400 in 19.6441 ms
+2023-10-23 10:18:09.506 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7211/api/Login application/json 70 - 400 - application/problem+json;+charset=utf-8 28.2173ms
+2023-10-23 10:20:39.117 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7211/api/Login - 0
+2023-10-23 10:20:39.119 +04:00 [INF] CORS policy execution successful.
+2023-10-23 10:20:39.121 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-23 10:20:39.122 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-23 10:20:39.151 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-23 10:20:39.156 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 5.6571ms
+2023-10-23 10:20:39.158 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-23 10:20:39.161 +04:00 [INF] HTTP POST /api/Login responded 400 in 41.7992 ms
+2023-10-23 10:20:39.166 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7211/api/Login - 0 - 400 - application/problem+json;+charset=utf-8 49.5101ms
+2023-10-23 10:22:19.842 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7211/api/Login text/plain 70
+2023-10-23 10:22:19.844 +04:00 [INF] Executing endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-23 10:22:19.847 +04:00 [INF] Route matched with {action = "post", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult post(System.String, System.String) on controller Library_web.Controllers.LoginController (Library_web).
+2023-10-23 10:22:19.851 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-10-23 10:22:19.854 +04:00 [INF] Executed action Library_web.Controllers.LoginController.post (Library_web) in 3.887ms
+2023-10-23 10:22:19.857 +04:00 [INF] Executed endpoint 'Library_web.Controllers.LoginController.post (Library_web)'
+2023-10-23 10:22:19.860 +04:00 [INF] HTTP POST /api/Login responded 400 in 15.3500 ms
+2023-10-23 10:22:19.861 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7211/api/Login text/plain 70 - 400 - application/problem+json;+charset=utf-8 19.5059ms

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Library_web
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext :DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)//use for appps.json
             : base(options)

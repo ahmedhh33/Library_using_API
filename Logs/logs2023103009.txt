@@ -1,0 +1,66 @@
+2023-10-30 09:32:56.559 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BorrowingTransactions/GetTransactionHistoryForPatron?patronId=1 - -
+2023-10-30 09:32:56.719 +04:00 [INF] CORS policy execution successful.
+2023-10-30 09:32:56.738 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BorrowingTransactionsController.GetTransactionHistoryForPatron (Library_web)'
+2023-10-30 09:32:56.752 +04:00 [INF] Route matched with {action = "GetTransactionHistoryForPatron", controller = "BorrowingTransactions"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetTransactionHistoryForPatron(Int32) on controller Library_web.Controllers.BorrowingTransactionsController (Library_web).
+2023-10-30 09:32:56.994 +04:00 [INF] Executed DbCommand (53ms) [Parameters=[@__patronId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Pat_ID], [t].[Age], [t].[EmailAddress], [t].[Name], [t].[password], [t0].[TraID], [t0].[B_ID], [t0].[Pat_ID], [t0].[borrowing_date], [t0].[return_date], [t0].[B_ID0], [t0].[author], [t0].[is_Available], [t0].[publication_year], [t0].[title]
+FROM (
+    SELECT TOP(1) [p].[Pat_ID], [p].[Age], [p].[EmailAddress], [p].[Name], [p].[password]
+    FROM [patronManagements] AS [p]
+    WHERE [p].[Pat_ID] = @__patronId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [b].[TraID], [b].[B_ID], [b].[Pat_ID], [b].[borrowing_date], [b].[return_date], [b0].[B_ID] AS [B_ID0], [b0].[author], [b0].[is_Available], [b0].[publication_year], [b0].[title]
+    FROM [BorrowingTransactions] AS [b]
+    INNER JOIN [bookManagements] AS [b0] ON [b].[B_ID] = [b0].[B_ID]
+) AS [t0] ON [t].[Pat_ID] = [t0].[Pat_ID]
+ORDER BY [t].[Pat_ID], [t0].[TraID]
+2023-10-30 09:32:57.060 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-30 09:32:57.065 +04:00 [INF] Executed action Library_web.Controllers.BorrowingTransactionsController.GetTransactionHistoryForPatron (Library_web) in 309.2103ms
+2023-10-30 09:32:57.068 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BorrowingTransactionsController.GetTransactionHistoryForPatron (Library_web)'
+2023-10-30 09:32:57.070 +04:00 [INF] HTTP GET /api/BorrowingTransactions/GetTransactionHistoryForPatron responded 200 in 358.7380 ms
+2023-10-30 09:32:57.075 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BorrowingTransactions/GetTransactionHistoryForPatron?patronId=1 - - - 200 - text/plain;+charset=utf-8 529.5558ms
+2023-10-30 09:33:03.153 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BorrowingTransactions/GetTransactionHistoryForPatron?patronId=1 - -
+2023-10-30 09:33:03.161 +04:00 [INF] CORS policy execution successful.
+2023-10-30 09:33:03.163 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BorrowingTransactionsController.GetTransactionHistoryForPatron (Library_web)'
+2023-10-30 09:33:03.169 +04:00 [INF] Route matched with {action = "GetTransactionHistoryForPatron", controller = "BorrowingTransactions"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetTransactionHistoryForPatron(Int32) on controller Library_web.Controllers.BorrowingTransactionsController (Library_web).
+2023-10-30 09:33:03.229 +04:00 [INF] Executed DbCommand (11ms) [Parameters=[@__patronId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Pat_ID], [t].[Age], [t].[EmailAddress], [t].[Name], [t].[password], [t0].[TraID], [t0].[B_ID], [t0].[Pat_ID], [t0].[borrowing_date], [t0].[return_date], [t0].[B_ID0], [t0].[author], [t0].[is_Available], [t0].[publication_year], [t0].[title]
+FROM (
+    SELECT TOP(1) [p].[Pat_ID], [p].[Age], [p].[EmailAddress], [p].[Name], [p].[password]
+    FROM [patronManagements] AS [p]
+    WHERE [p].[Pat_ID] = @__patronId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [b].[TraID], [b].[B_ID], [b].[Pat_ID], [b].[borrowing_date], [b].[return_date], [b0].[B_ID] AS [B_ID0], [b0].[author], [b0].[is_Available], [b0].[publication_year], [b0].[title]
+    FROM [BorrowingTransactions] AS [b]
+    INNER JOIN [bookManagements] AS [b0] ON [b].[B_ID] = [b0].[B_ID]
+) AS [t0] ON [t].[Pat_ID] = [t0].[Pat_ID]
+ORDER BY [t].[Pat_ID], [t0].[TraID]
+2023-10-30 09:33:03.247 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-30 09:33:03.251 +04:00 [INF] Executed action Library_web.Controllers.BorrowingTransactionsController.GetTransactionHistoryForPatron (Library_web) in 41.3767ms
+2023-10-30 09:33:03.255 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BorrowingTransactionsController.GetTransactionHistoryForPatron (Library_web)'
+2023-10-30 09:33:03.256 +04:00 [INF] HTTP GET /api/BorrowingTransactions/GetTransactionHistoryForPatron responded 200 in 95.6244 ms
+2023-10-30 09:33:03.259 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BorrowingTransactions/GetTransactionHistoryForPatron?patronId=1 - - - 200 - text/plain;+charset=utf-8 106.0652ms
+2023-10-30 09:33:06.384 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7211/api/BorrowingTransactions/GetTransactionHistoryForPatron?patronId=1 - -
+2023-10-30 09:33:06.387 +04:00 [INF] CORS policy execution successful.
+2023-10-30 09:33:06.389 +04:00 [INF] Executing endpoint 'Library_web.Controllers.BorrowingTransactionsController.GetTransactionHistoryForPatron (Library_web)'
+2023-10-30 09:33:06.393 +04:00 [INF] Route matched with {action = "GetTransactionHistoryForPatron", controller = "BorrowingTransactions"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetTransactionHistoryForPatron(Int32) on controller Library_web.Controllers.BorrowingTransactionsController (Library_web).
+2023-10-30 09:33:06.414 +04:00 [INF] Executed DbCommand (12ms) [Parameters=[@__patronId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Pat_ID], [t].[Age], [t].[EmailAddress], [t].[Name], [t].[password], [t0].[TraID], [t0].[B_ID], [t0].[Pat_ID], [t0].[borrowing_date], [t0].[return_date], [t0].[B_ID0], [t0].[author], [t0].[is_Available], [t0].[publication_year], [t0].[title]
+FROM (
+    SELECT TOP(1) [p].[Pat_ID], [p].[Age], [p].[EmailAddress], [p].[Name], [p].[password]
+    FROM [patronManagements] AS [p]
+    WHERE [p].[Pat_ID] = @__patronId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [b].[TraID], [b].[B_ID], [b].[Pat_ID], [b].[borrowing_date], [b].[return_date], [b0].[B_ID] AS [B_ID0], [b0].[author], [b0].[is_Available], [b0].[publication_year], [b0].[title]
+    FROM [BorrowingTransactions] AS [b]
+    INNER JOIN [bookManagements] AS [b0] ON [b].[B_ID] = [b0].[B_ID]
+) AS [t0] ON [t].[Pat_ID] = [t0].[Pat_ID]
+ORDER BY [t].[Pat_ID], [t0].[TraID]
+2023-10-30 09:33:06.432 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-10-30 09:33:06.441 +04:00 [INF] Executed action Library_web.Controllers.BorrowingTransactionsController.GetTransactionHistoryForPatron (Library_web) in 42.2027ms
+2023-10-30 09:33:06.450 +04:00 [INF] Executed endpoint 'Library_web.Controllers.BorrowingTransactionsController.GetTransactionHistoryForPatron (Library_web)'
+2023-10-30 09:33:06.458 +04:00 [INF] HTTP GET /api/BorrowingTransactions/GetTransactionHistoryForPatron responded 200 in 70.3506 ms
+2023-10-30 09:33:06.461 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7211/api/BorrowingTransactions/GetTransactionHistoryForPatron?patronId=1 - - - 200 - text/plain;+charset=utf-8 76.8478ms

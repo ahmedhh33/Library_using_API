@@ -14,7 +14,7 @@ namespace Library_web.Controllers
         {
             _context = DB;
         }
-        [Authorize]
+        //[Authorize]
         [HttpPost]
         public IActionResult AddBook(string title, string author, int publication_year)
         {
@@ -23,6 +23,7 @@ namespace Library_web.Controllers
             {
                 BookManagement bookManagement = new BookManagement
                 {
+                    
                     title = title,
                     author = author,
                     publication_year = publication_year,
@@ -39,7 +40,7 @@ namespace Library_web.Controllers
                 return BadRequest("Error adding book: " + ex.Message);
             }
         }
-        [Authorize]
+        //[Authorize]
         [HttpDelete]
         public IActionResult Remove(int ID)
         {
@@ -65,7 +66,7 @@ namespace Library_web.Controllers
                 return BadRequest("Error removing book: " + ex.Message);
             }
         }
-        [Authorize]
+        //[Authorize]
         [HttpPut]
         public IActionResult UpdateBook(int ID, string title, string author, int publication_year)
         {
@@ -153,7 +154,7 @@ namespace Library_web.Controllers
                 return BadRequest("No book published in this year");
             }
         }
-        [Authorize]
+        //[Authorize]
         [HttpGet("GetAllBook")]
         public IActionResult GetAllBooks()
         {

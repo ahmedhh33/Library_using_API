@@ -1,6 +1,7 @@
 ﻿using Library_web.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Library_web.Controllers
@@ -15,9 +16,9 @@ namespace Library_web.Controllers
         {
             _context = DB;
         }
-        [Authorize]
+        //[Authorize]
         [HttpPost]
-        public IActionResult AddPatron(string name, string emailAddress, int age)
+        public IActionResult AddPatron(string name, string emailAddress, int age, string password)
         {
             try
             {
@@ -25,7 +26,8 @@ namespace Library_web.Controllers
                 {
                     Name = name,
                     EmailAddress = emailAddress,
-                    Age = age
+                    Age = age,
+                    password=password
                 };
 
                 _context.patronManagements.Add(patronManagement);

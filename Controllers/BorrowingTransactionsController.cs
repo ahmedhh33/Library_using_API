@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
 //using Newtonsoft.Json;
 using System.Net.Http.Json;
 using System.Text;
@@ -25,9 +24,9 @@ namespace Library_web.Controllers
             client.BaseAddress = new Uri("https://localhost:7088/");
             _context = DB;
         }
-        [Authorize]
+        //[Authorize]
         [HttpPost]
-        public async Task<IActionResult> CreateBorrowingTransaction(int patronId, int bookId)
+        public async Task<IActionResult> CreateBorrowingTransaction(int patronId, int bookId,int AccountNumber,int AccountHolderID)
         {
             try
             {
@@ -46,17 +45,34 @@ namespace Library_web.Controllers
                     borrowing_date = DateTime.Now,
                     return_date = null
                 };
-                HttpResponseMessage res = client.PostAsync("api/Transaction/Withdraw", new StringContent(JsonConvert.SerializeObject(new { accountNumber = 10460, amount = 33, accountHolderID = 3 }), Encoding.UTF8, "application/json")).Result;
 
-               // HttpResponseMessage res = client.GetAsync($"api/Transaction/Withdraw?accountNumber=10460&amount=33&accountHolderID=3").Result;
-
-                if (res.IsSuccessStatusCode)
+                var withdrawRequest = new WithdrawRequest
                 {
-                    return Ok("Sucssed");
+                    AccountNumber = AccountNumber,
+                    Amount = 3,
+                    AccountHolderID = AccountHolderID
+                };
+
+                using var client = new HttpClient();
+                client.BaseAddress = new Uri("https://localhost:7088/");
+
+                try
+                {
+                    HttpResponseMessage response = await client.PostAsJsonAsync("api/Transaction/Withdraw", withdrawRequest);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var result = await response.Content.ReadAsStringAsync();
+                        Console.WriteLine("Response: " + result);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Request failed: " + response.ReasonPhrase);
+                    }
                 }
-                else
+                catch (HttpRequestException e)
                 {
-                    return BadRequest("No responce found");
+                    Console.WriteLine("Exception: " + e.Message);
                 }
 
 
@@ -74,75 +90,9 @@ namespace Library_web.Controllers
                 return BadRequest("Error creating borrowing transaction: " + ex.Message);
             }
         }
-
-        //[HttpPost]
-        //public IActionResult CreateBorrowingTransaction(int patronId, int bookId)
-        //{
-        //    try
-        //    {
-        //        PatronManagement patron = _context.patronManagements.FirstOrDefault(p => p.Pat_ID == patronId);
-        //        BookManagement book = _context.bookManagements.FirstOrDefault(b => b.B_ID == bookId);
-
-        //        if (patron == null || book == null || !book.is_Available)
-        //        {
-        //            return BadRequest("Patron or Book not found or the book is not available");
-        //        }
-
-        //        // Make a POST request to the Withdraw API
-        //        var withdrawRequest = new WithdrawRequest
-        //        {
-        //            AccountNumber = 10460,
-        //            Amount = 33,
-        //            AccountHolderID = 3
-        //        };
-
-        //        // Make the POST request to the Withdraw API
-        //        var withdrawResponse = MakeWithdrawal(withdrawRequest);
-
-        //        if (withdrawResponse.IsSuccessStatusCode)
-        //        {
-        //            BorrowingTransactions transaction = new BorrowingTransactions
-        //            {
-        //                Pat_ID = patronId,
-        //                B_ID = bookId,
-        //                borrowing_date = DateTime.Now,
-        //                return_date = null
-        //            };
-
-        //            _context.BorrowingTransactions.Add(transaction);
-        //            book.is_Available = false; // Mark the book as unavailable.
-        //            _context.SaveChanges();
-
-        //            return Ok("Borrowing transaction created successfully");
-        //        }
-        //        else
-        //        {
-        //            return BadRequest("Error creating borrowing transaction.");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return StatusCode(500, "An error occurred: " + ex.Message);
-        //    }
-        //}
-
-        //private HttpResponseMessage MakeWithdrawal(WithdrawRequest request)
-        //{
-        //    using (var client = new HttpClient())
-        //    {
-        //        var apiUrl = "https://localhost:7088/api/Transaction/Withdraw";
-        //        var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
-
-        //        return client.PostAsync(apiUrl, content).Result;
-        //    }
-        //}
-
-
-
-
-        [Authorize]
+        //[Authorize]
         [HttpPut]
-        public IActionResult MarkBookAsReturned(int transactionId)
+        public IActionResult MarkBookAsRetburned(int transactionId)
         {
             var transaction = _context.BorrowingTransactions.FirstOrDefault(t => t.TraID == transactionId);
             try
@@ -202,11 +152,11 @@ namespace Library_web.Controllers
         {
             try
             {
-            //    var options = new JsonSerializerOptions
-            //    {
-            //        ReferenceHandler = ReferenceHandler.Preserve,
-            //        WriteIndented = true,
-            //    };
+                var options = new JsonSerializerOptions
+                {
+                    ReferenceHandler = ReferenceHandler.Preserve,
+                    WriteIndented = true,
+                };
 
                 var patron = _context.patronManagements
                     .Include(x => x.borrowingTransactions)
@@ -227,8 +177,8 @@ namespace Library_web.Controllers
                             })
                     .ToList();
 
-                    //return Ok(JsonSerializer.Serialize(transactionHistory, options));
-                    return Ok(transactionHistory);
+                    return Ok(JsonSerializer.Serialize(transactionHistory, options));
+                    //return Ok(transactionHistory);
                 }
                 else
                 {
@@ -246,12 +196,12 @@ namespace Library_web.Controllers
         public IActionResult GetTransactionHistoryForBook(int bookid)
         {
             try 
-            { 
-                //var options = new JsonSerializerOptions
-                //{
-                //ReferenceHandler = ReferenceHandler.Preserve,
-                //WriteIndented = true,
-                //};
+            {
+                var options = new JsonSerializerOptions
+                {
+                    ReferenceHandler = ReferenceHandler.Preserve,
+                    WriteIndented = true,
+                };
                 var Bh = _context.bookManagements.Include(x => x.borrowingTransactions)
                                              .ThenInclude(x => x.PatronManagement)
                                              .FirstOrDefault(x => x.B_ID == bookid);
@@ -269,8 +219,8 @@ namespace Library_web.Controllers
                                                  })
                                                 .ToList();
                 
-                  //return Ok(JsonSerializer.Serialize(BH,options));
-                  return Ok(BH);
+                  return Ok(JsonSerializer.Serialize(BH,options));
+                  //return Ok(BH);
                 }
                 else
                 {
@@ -289,11 +239,11 @@ namespace Library_web.Controllers
         {
             try
             {
-                //var options = new JsonSerializerOptions
-                //{
-                //    ReferenceHandler = ReferenceHandler.Preserve,
-                //    WriteIndented = true,
-                //};
+                var options = new JsonSerializerOptions
+                {
+                    ReferenceHandler = ReferenceHandler.Preserve,
+                    WriteIndented = true,
+                };
 
                 var transactions = _context.BorrowingTransactions
                     .Include(t => t.BookManagement)
@@ -318,8 +268,8 @@ namespace Library_web.Controllers
                         BorrowDate = x.borrowing_date,
                         returnDate = x.borrowing_date,
                     }));
-                   // return Ok(JsonSerializer.Serialize(TH, options));
-                   return Ok(TH);
+                   return Ok(JsonSerializer.Serialize(TH, options));
+                  // return Ok(TH);
                 }
 
             }
@@ -331,11 +281,11 @@ namespace Library_web.Controllers
         [HttpGet("GetByBorrowDate")]
         public IActionResult GetAllBorrowingsInDate(DateTime Borrowdate)
         {
-            //var options = new JsonSerializerOptions
-            //{
-            //    ReferenceHandler = ReferenceHandler.Preserve,
-            //    WriteIndented = true,
-            //};
+            var options = new JsonSerializerOptions
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                WriteIndented = true,
+            };
 
             try
             {
@@ -361,8 +311,8 @@ namespace Library_web.Controllers
                         BorrowDate = x.borrowing_date,
                         returnDate = x.borrowing_date,
                     }));
-                   // return Ok(JsonSerializer.Serialize(TH, options));
-                   return BadRequest(TH);
+                    return Ok(JsonSerializer.Serialize(TH, options));
+                   //return BadRequest(TH);
                 }
             }
             catch (Exception ex)
@@ -373,11 +323,11 @@ namespace Library_web.Controllers
         [HttpGet("GetByReturnDate")]
         public IActionResult GetAllTransactionsByReturnDate(DateTime returnDate)
         {
-            //var options = new JsonSerializerOptions
-            //{
-            //    ReferenceHandler = ReferenceHandler.Preserve,
-            //    WriteIndented = true,
-            //};
+            var options = new JsonSerializerOptions
+            {
+                ReferenceHandler = ReferenceHandler.Preserve,
+                WriteIndented = true,
+            };
 
             try
             {
@@ -403,8 +353,8 @@ namespace Library_web.Controllers
                         BorrowDate = x.borrowing_date,
                         returnDate = x.borrowing_date,
                     }));
-                   // return Ok(JsonSerializer.Serialize(TH, options));
-                    return Ok(TH);
+                    return Ok(JsonSerializer.Serialize(TH, options));
+                    //return Ok(TH);
                 }
             }
             catch (Exception ex)
